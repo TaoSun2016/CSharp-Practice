@@ -54,5 +54,15 @@ namespace CSharp
                 Console.WriteLine("->{0}", name);
             Console.WriteLine();
         }
+
+        // Display implemented interfaces.
+        static void ListInterfaces(Type t)
+        {
+            Console.WriteLine("***** Interfaces *****");
+            var ifaces = from i in t.GetInterfaces()
+                         select i;
+            foreach (Type i in ifaces)
+                Console.WriteLine("->{0}", i.Name);
+        }
     }
 }
