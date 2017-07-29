@@ -32,5 +32,16 @@ namespace CSharp
                 Console.WriteLine("->{0}", name);
             Console.WriteLine();
         }
+
+        // Display field names of type.
+        static void ListFields(Type t)
+        {
+            Console.WriteLine("***** Fields *****");
+            var fieldNames = from f in t.GetFields()
+                             select f.Name;
+            foreach (var name in fieldNames)
+                Console.WriteLine("->{0}", name);
+            Console.WriteLine();
+        }
     }
 }
