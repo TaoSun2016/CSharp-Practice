@@ -43,5 +43,16 @@ namespace CSharp
                 Console.WriteLine("->{0}", name);
             Console.WriteLine();
         }
+
+        // Display property names of type.
+        static void ListProps(Type t)
+        {
+            Console.WriteLine("***** Properties *****");
+            var propNames = from p in t.GetProperties()
+                            select p.Name;
+            foreach (var name in propNames)
+                Console.WriteLine("->{0}", name);
+            Console.WriteLine();
+        }
     }
 }
