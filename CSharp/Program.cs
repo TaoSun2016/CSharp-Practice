@@ -64,5 +64,16 @@ namespace CSharp
             foreach (Type i in ifaces)
                 Console.WriteLine("->{0}", i.Name);
         }
+
+        static void ListVariousStats(Type t)
+        {
+            Console.WriteLine("***** Various Statistics * ****");
+            Console.WriteLine("Base class is: {0}", t.BaseType);
+            Console.WriteLine("Is type abstract? {0}", t.IsAbstract);
+            Console.WriteLine("Is type sealed? {0}", t.IsSealed);
+            Console.WriteLine("Is type generic? {0}", t.IsGenericTypeDefinition);
+            Console.WriteLine("Is type a class type? {0}", t.IsClass);
+            Console.WriteLine();
+        }
     }
 }
