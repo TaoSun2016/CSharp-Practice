@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,6 +21,15 @@ namespace CSharp
             mv.TurboBoost();
             Console.WriteLine("Done. Press any key to terminate");
             Console.ReadLine();
+        }
+        // Display method names of type.
+        static void ListMethods(Type t)
+        {
+            Console.WriteLine("***** Methods *****");
+            MethodInfo[] mi = t.GetMethods();
+            foreach (MethodInfo m in mi)
+                Console.WriteLine("->{0}", m.Name);
+            Console.WriteLine();
         }
     }
 }
