@@ -12,7 +12,8 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            TestCar();
+            //TestCar();
+            (new ReflectTest()).test();
         }
 
         static void TestCar()
