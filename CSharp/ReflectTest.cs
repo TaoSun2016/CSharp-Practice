@@ -10,7 +10,35 @@ namespace CSharp
     {
         public void test()
         {
-
+            Console.WriteLine("***** Welcome to MyTypeViewer * ****");
+            string typeName = "";
+            do
+            {
+                Console.WriteLine("\nEnter a type name to evaluate");
+                Console.Write("or enter Q to quit: ");
+                // Get name of type.
+                typeName = Console.ReadLine();
+                // Does user want to quit?
+                if (typeName.ToUpper() == "Q")
+                {
+                    break;
+                }
+                // Try to display type.
+                try
+                {
+                    Type t = Type.GetType(typeName);
+                    Console.WriteLine("");
+                    ListVariousStats(t);
+                    ListFields(t);
+                    ListProps(t);
+                    ListMethods(t);
+                    ListInterfaces(t);
+                }
+                catch
+                {
+                    Console.WriteLine("Sorry, can’t find type");
+                }
+            } while (true);
         }
         // Display method names of type.
         static void ListMethods(Type t)

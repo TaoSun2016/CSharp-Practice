@@ -12,6 +12,11 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
+            TestCar();
+        }
+
+        static void TestCar()
+        {
             Console.WriteLine("***** C# CarLibrary  Client App * ****");
             // Make a sports car.
             SportsCar viper = new SportsCar("Viper", 240, 40);
