@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -44,10 +45,22 @@ namespace CSharp
         static void ListMethods(Type t)
         {
             Console.WriteLine("***** Methods *****");
-            var methodNames = from n in t.GetMethods()
-                              select n.Name;
-            foreach (var name in methodNames)
-                Console.WriteLine("->{0}", name);
+            var methodNames = from m in t.GetMethods()
+                              select m;
+            foreach (var m in methodNames)
+            {
+                // Get return type.
+                string retVal = m.ReturnType.FullName;
+                string paramInfo = "( ";
+                // Get params.
+                foreach (ParameterInfo pi in m.GetParameters())
+                {
+                    paramInfo += string.Format("{0} {1} ", pi.ParameterType, pi.Name);
+                    paramInfo += " )";
+                    // Now display the basic method sig.
+                    Console.WriteLine("->{0} {1} {2}", retVal, m.Name, paramInfo);
+                }
+            }
             Console.WriteLine();
         }
 
