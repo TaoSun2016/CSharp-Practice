@@ -13,7 +13,8 @@ namespace CSharp
         static void Main(string[] args)
         {
             //TestCar();
-            (new ReflectTest()).test();
+            //(new ReflectTest()).test();
+            ExternalAssemblyReflector.test();
         }
 
         static void TestCar()

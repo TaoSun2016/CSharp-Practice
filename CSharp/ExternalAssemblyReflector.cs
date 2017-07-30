@@ -19,7 +19,7 @@ namespace CSharp
             Console.WriteLine("");
         }
 
-        static void test()
+        public static void test()
         {
             Console.WriteLine("***** External Assembly Viewer * ****");
             string asmName = "";
