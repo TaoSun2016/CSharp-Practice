@@ -14,7 +14,8 @@ namespace CSharp
         {
             //TestCar();
             //(new ReflectTest()).test();
-            ExternalAssemblyReflector.test();
+            //ExternalAssemblyReflector.test();
+            SharedAsmReflector.test();
         }
 
         static void TestCar()
