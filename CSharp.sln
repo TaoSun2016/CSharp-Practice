@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarLibrary", "CarLibrary\CarLibrary.csproj", "{8E5CD107-A3E0-4C96-9A18-A2F294678802}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LateBindingApp", "LateBindingApp\LateBindingApp.csproj", "{74E3FFF6-EC14-4D5D-BE74-DA789A5297BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8E5CD107-A3E0-4C96-9A18-A2F294678802}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E5CD107-A3E0-4C96-9A18-A2F294678802}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E5CD107-A3E0-4C96-9A18-A2F294678802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74E3FFF6-EC14-4D5D-BE74-DA789A5297BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E3FFF6-EC14-4D5D-BE74-DA789A5297BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E3FFF6-EC14-4D5D-BE74-DA789A5297BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E3FFF6-EC14-4D5D-BE74-DA789A5297BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
