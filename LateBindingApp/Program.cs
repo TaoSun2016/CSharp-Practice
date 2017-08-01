@@ -33,10 +33,14 @@ namespace LateBindingApp
             try
             {
                 // Get metadata for the Minivan type.
-                Type miniVan  = asm.GetType("CarLibrary.MiniVan");
-                // Create a Minivan instance on the fly.
+                Type miniVan = asm.GetType("CarLibrary.MiniVan");
+                // Create the Minivan on the fly.
                 object obj = Activator.CreateInstance(miniVan);
                 Console.WriteLine("Created a {0} using late binding!", obj);
+                // Get info for TurboBoost.
+                MethodInfo mi = miniVan.GetMethod("TurboBoost");
+                // Invoke method (’null’ for no parameters).
+                mi.Invoke(obj, null);
             }
             catch (Exception ex)
             {
