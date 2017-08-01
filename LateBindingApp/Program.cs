@@ -25,7 +25,7 @@ namespace LateBindingApp
                 return;
             }
             if (a != null)
-                CreateUsingLateBinding(a);
+                InvokeMethodWithArgsUsingLateBinding(a);
             Console.ReadLine();
         }
         static void CreateUsingLateBinding(Assembly asm)
