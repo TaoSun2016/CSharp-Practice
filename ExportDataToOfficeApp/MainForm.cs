@@ -35,5 +35,16 @@ namespace ExportDataToOfficeApp
             dataGridCars.DataSource = null;
             dataGridCars.DataSource = carsInStock;
         }
+
+        private void btnAddNewCar_Click(object sender, EventArgs e)
+        {
+            NewCarDialog d = new NewCarDialog();
+            if (d.ShowDialog() == DialogResult.OK)
+            {
+                // Add new car to list.
+                carsInStock.Add(d.theCar);
+                UpdateGrid();
+            }
+        }
     }
 }

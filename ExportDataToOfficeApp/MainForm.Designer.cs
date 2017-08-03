@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridCars = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddNewCar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCars)).BeginInit();
@@ -44,14 +44,15 @@
             this.dataGridCars.Size = new System.Drawing.Size(240, 150);
             this.dataGridCars.TabIndex = 0;
             // 
-            // button1
+            // btnAddNewCar
             // 
-            this.button1.Location = new System.Drawing.Point(27, 177);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddNewCar.Location = new System.Drawing.Point(27, 177);
+            this.btnAddNewCar.Name = "btnAddNewCar";
+            this.btnAddNewCar.Size = new System.Drawing.Size(75, 23);
+            this.btnAddNewCar.TabIndex = 1;
+            this.btnAddNewCar.Text = "Add";
+            this.btnAddNewCar.UseVisualStyleBackColor = true;
+            this.btnAddNewCar.Click += new System.EventHandler(this.btnAddNewCar_Click);
             // 
             // button2
             // 
@@ -79,7 +80,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAddNewCar);
             this.Controls.Add(this.dataGridCars);
             this.Name = "MainForm";
             this.Text = "MainForm";
@@ -93,7 +94,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridCars;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddNewCar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
     }
