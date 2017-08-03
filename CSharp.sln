@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LateBindingWithDynamic", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLibrary", "MathLibrary\MathLibrary.csproj", "{DCAC1308-4F89-4C1E-BE9E-37EB98CCD676}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportDataToOfficeApp", "ExportDataToOfficeApp\ExportDataToOfficeApp.csproj", "{6D844F35-651F-4EFD-8996-9DB9F8BC44AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{DCAC1308-4F89-4C1E-BE9E-37EB98CCD676}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCAC1308-4F89-4C1E-BE9E-37EB98CCD676}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCAC1308-4F89-4C1E-BE9E-37EB98CCD676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D844F35-651F-4EFD-8996-9DB9F8BC44AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D844F35-651F-4EFD-8996-9DB9F8BC44AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D844F35-651F-4EFD-8996-9DB9F8BC44AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D844F35-651F-4EFD-8996-9DB9F8BC44AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
