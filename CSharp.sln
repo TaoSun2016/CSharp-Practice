@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonSnappableTypes", "Com
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpSnapIn", "CSharpSnapIn\CSharpSnapIn.csproj", "{B0C6CEBE-4696-4DD3-8D24-3E21E611C2AB}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VbSnapIn", "VbSnapIn\VbSnapIn.vbproj", "{07DDB942-FA1B-4686-AD75-A6D0CA138611}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B0C6CEBE-4696-4DD3-8D24-3E21E611C2AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0C6CEBE-4696-4DD3-8D24-3E21E611C2AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0C6CEBE-4696-4DD3-8D24-3E21E611C2AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07DDB942-FA1B-4686-AD75-A6D0CA138611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07DDB942-FA1B-4686-AD75-A6D0CA138611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07DDB942-FA1B-4686-AD75-A6D0CA138611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07DDB942-FA1B-4686-AD75-A6D0CA138611}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
