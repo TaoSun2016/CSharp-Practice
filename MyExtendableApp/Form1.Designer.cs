@@ -31,7 +31,7 @@
             this.MainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.snapInModuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listLoadedSnapIns = new System.Windows.Forms.ListBox();
+            this.lstLoadedSnapIns = new System.Windows.Forms.ListBox();
             this.MainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,25 +58,24 @@
             this.snapInModuleToolStripMenuItem.Name = "snapInModuleToolStripMenuItem";
             this.snapInModuleToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.snapInModuleToolStripMenuItem.Text = "Snap in Module";
+            this.snapInModuleToolStripMenuItem.Click += new System.EventHandler(this.snapInModuleToolStripMenuItem_Click);
             // 
-            // listLoadedSnapIns
+            // lstLoadedSnapIns
             // 
-            this.listLoadedSnapIns.FormattingEnabled = true;
-            this.listLoadedSnapIns.ItemHeight = 12;
-            this.listLoadedSnapIns.Location = new System.Drawing.Point(24, 45);
-            this.listLoadedSnapIns.Name = "listLoadedSnapIns";
-            this.listLoadedSnapIns.Size = new System.Drawing.Size(120, 88);
-            this.listLoadedSnapIns.TabIndex = 1;
-            this.listLoadedSnapIns.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lstLoadedSnapIns.FormattingEnabled = true;
+            this.lstLoadedSnapIns.ItemHeight = 12;
+            this.lstLoadedSnapIns.Location = new System.Drawing.Point(24, 45);
+            this.lstLoadedSnapIns.Name = "lstLoadedSnapIns";
+            this.lstLoadedSnapIns.Size = new System.Drawing.Size(120, 88);
+            this.lstLoadedSnapIns.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.listLoadedSnapIns);
+            this.Controls.Add(this.lstLoadedSnapIns);
             this.Controls.Add(this.MainMenuStrip);
-            this.MainMenuStrip = this.MainMenuStrip;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -89,10 +88,10 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip MainMenuStrip;
+        private new System.Windows.Forms.MenuStrip MainMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem snapInModuleToolStripMenuItem;
-        private System.Windows.Forms.ListBox listLoadedSnapIns;
+        private System.Windows.Forms.ListBox lstLoadedSnapIns;
     }
 }
 

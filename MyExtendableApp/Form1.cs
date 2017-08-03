@@ -24,9 +24,49 @@ namespace MyExtendableApp
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void snapInModuleToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Allow user to select an assembly to load.
+            OpenFileDialog dlg = new OpenFileDialog();
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                if (dlg.FileName.Contains("CommonSnappableTypes")){
+                    MessageBox.Show("CommonSnappableTypes has no snap - ins!");
+                }
+                else if (!LoadExternalModule(dlg.FileName)){
+                    MessageBox.Show("Nothing implements IAppFunctionality!");
+                }
+            }
+        }
 
+        private bool LoadExternalModule(string path)
+        {
+            bool foundSnapIn = false;
+            Assembly theSnapInAsm = null;
+            try
+            {
+                // Dynamically load the selected assembly.
+                theSnapInAsm = Assembly.LoadFrom(path);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return foundSnapIn;
+            }
+            // Get all IAppFunctionality-compatible classes in assembly.
+            var theClassTypes = from t in theSnapInAsm.GetTypes()
+                                where t.IsClass && (t.GetInterface("IAppFunctionality")!= null)
+                                select t;
+            // Now, create the object and call DoIt() method.
+            foreach (Type t in theClassTypes)
+            {
+                foundSnapIn = true;
+                // Use late binding to create the type.
+                IAppFunctionality itfApp = (IAppFunctionality)theSnapInAsm.CreateInstance(t.FullName,true);
+                itfApp.DoIt();
+                lstLoadedSnapIns.Items.Add(t.FullName);
+            }
+            return foundSnapIn;
         }
     }
 }
