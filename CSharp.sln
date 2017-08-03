@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpSnapIn", "CSharpSnapI
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VbSnapIn", "VbSnapIn\VbSnapIn.vbproj", "{07DDB942-FA1B-4686-AD75-A6D0CA138611}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyExtendableApp", "MyExtendableApp\MyExtendableApp.csproj", "{1E9B8FB4-A774-4BEC-A404-2439D2F99F23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{07DDB942-FA1B-4686-AD75-A6D0CA138611}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07DDB942-FA1B-4686-AD75-A6D0CA138611}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07DDB942-FA1B-4686-AD75-A6D0CA138611}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E9B8FB4-A774-4BEC-A404-2439D2F99F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E9B8FB4-A774-4BEC-A404-2439D2F99F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E9B8FB4-A774-4BEC-A404-2439D2F99F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E9B8FB4-A774-4BEC-A404-2439D2F99F23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
