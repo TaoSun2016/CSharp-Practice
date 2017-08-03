@@ -11,6 +11,8 @@ namespace LateBindingWithDynamic
     {
         static void Main(string[] args)
         {
+            AddWithReflection();
+            AddWithDynamic();
         }
         private static void AddWithReflection()
         {
