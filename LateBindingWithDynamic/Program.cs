@@ -32,5 +32,23 @@ namespace LateBindingWithDynamic
                 Console.WriteLine(ex.Message);
             }
         }
+
+        private static void AddWithDynamic()
+        {
+            Assembly asm = Assembly.Load("MathLibrary");
+            try
+            {
+                // Get metadata for the SimpleMath type.
+                Type math = asm.GetType("MathLibrary.SimpleMath");
+                // Create a SimpleMath on the fly.
+                dynamic obj = Activator.CreateInstance(math);
+                // Note how easily we can now call Add().
+                Console.WriteLine("Result is: {0}", obj.Add(10, 70));
+            }
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
