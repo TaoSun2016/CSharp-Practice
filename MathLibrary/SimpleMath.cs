@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace MathLibrary
 {
-    public class Class1
+    public class SimpleMath
     {
+        public int Add(int x, int y)
+        {
+            return x + y;
+        }
     }
 }
