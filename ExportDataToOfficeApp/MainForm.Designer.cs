@@ -30,7 +30,7 @@
         {
             this.dataGridCars = new System.Windows.Forms.DataGridView();
             this.btnAddNewCar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnExportToExcel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCars)).BeginInit();
             this.SuspendLayout();
@@ -54,14 +54,15 @@
             this.btnAddNewCar.UseVisualStyleBackColor = true;
             this.btnAddNewCar.Click += new System.EventHandler(this.btnAddNewCar_Click);
             // 
-            // button2
+            // btnExportToExcel
             // 
-            this.button2.Location = new System.Drawing.Point(131, 177);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Export";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnExportToExcel.Location = new System.Drawing.Point(131, 177);
+            this.btnExportToExcel.Name = "btnExportToExcel";
+            this.btnExportToExcel.Size = new System.Drawing.Size(75, 23);
+            this.btnExportToExcel.TabIndex = 2;
+            this.btnExportToExcel.Text = "Export";
+            this.btnExportToExcel.UseVisualStyleBackColor = true;
+            this.btnExportToExcel.Click += new System.EventHandler(this.btnExportToExcel_Click);
             // 
             // label1
             // 
@@ -79,7 +80,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnExportToExcel);
             this.Controls.Add(this.btnAddNewCar);
             this.Controls.Add(this.dataGridCars);
             this.Name = "MainForm";
@@ -95,7 +96,7 @@
 
         private System.Windows.Forms.DataGridView dataGridCars;
         private System.Windows.Forms.Button btnAddNewCar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnExportToExcel;
         private System.Windows.Forms.Label label1;
     }
 }
