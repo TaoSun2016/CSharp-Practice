@@ -11,6 +11,7 @@ namespace DefaultAppDomainApp
     {
         static void Main(string[] args)
         {
+            InitDAD();
             Console.WriteLine("***** Fun with the default AppDomain*****\n");
             DisplayDADStats();
             ListAllAssembliesInAppDomain();
@@ -41,6 +42,17 @@ namespace DefaultAppDomainApp
                 Console.WriteLine("-> Name: {0}", a.GetName().Name);
                 Console.WriteLine("-> Version: {0}\n",a.GetName().Version);
             }
+        }
+        private static void InitDAD()
+        {
+            // This logic will print out the name of any  assembly
+            // loaded into the applicaion domain, after it  has been
+            // created.
+            AppDomain defaultAD = AppDomain.CurrentDomain;
+            defaultAD.AssemblyLoad += (o, s) =>
+            {
+                Console.WriteLine("{0} has been loaded!", s.LoadedAssembly.GetName().Name);
+            };
         }
     }
 }
