@@ -32,7 +32,9 @@ namespace DefaultAppDomainApp
             // Get access to the AppDomain for the current thread.
             AppDomain defaultAD = AppDomain.CurrentDomain;
             // Now get all loaded assemblies in the default AppDomain.
-                Assembly[] loadedAssemblies = defaultAD.GetAssemblies();
+            var loadedAssemblies = from a in defaultAD.GetAssemblies()
+                                   orderby a.GetName().Name
+                                   select a;
             Console.WriteLine("***** Here are the assemblies loaded in {0} *****\n",defaultAD.FriendlyName);
             foreach (Assembly a in loadedAssemblies)
             {
