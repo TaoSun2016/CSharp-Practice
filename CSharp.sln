@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultAppDomainApp", "Defa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAppDomains", "CustomAppDomains\CustomAppDomains.csproj", "{9BC1C07B-E6DF-4CA2-B018-D91838BFD9F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectContextApp", "ObjectContextApp\ObjectContextApp.csproj", "{B1BDDDB3-1C88-4C4D-B4B2-E560720A79C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{9BC1C07B-E6DF-4CA2-B018-D91838BFD9F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BC1C07B-E6DF-4CA2-B018-D91838BFD9F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BC1C07B-E6DF-4CA2-B018-D91838BFD9F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1BDDDB3-1C88-4C4D-B4B2-E560720A79C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1BDDDB3-1C88-4C4D-B4B2-E560720A79C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1BDDDB3-1C88-4C4D-B4B2-E560720A79C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1BDDDB3-1C88-4C4D-B4B2-E560720A79C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
