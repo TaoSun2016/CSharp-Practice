@@ -14,7 +14,7 @@ namespace SyncDelegateReview
         {
             Console.WriteLine("***** Synch Delegate Review * ****");
             // Print out the ID of the executing thread.
-            Console.WriteLine("Main() invoked on thread { 0}.",Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("Main() invoked on thread {0}.",Thread.CurrentThread.ManagedThreadId);
             // Invoke Add() in a synchronous manner.
             BinaryOp b = new BinaryOp(Add);
             // Could also write b.Invoke(10, 10);
