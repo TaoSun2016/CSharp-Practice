@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,15 @@ namespace CustomAppDomains
             // Make a new AppDomain in the current  process and
             // list loaded assemblies.
             AppDomain newAD = AppDomain.CreateDomain("SecondAppDomain");
+            try
+            {
+                // Now load CarLibrary.dll into this new domain.
+                newAD.Load("CarLibrary");
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             ListAllAssembliesInAppDomain(newAD);
         }
         static void ListAllAssembliesInAppDomain(AppDomain ad)
