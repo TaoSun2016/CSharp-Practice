@@ -14,6 +14,10 @@ namespace CustomAppDomains
             Console.WriteLine("***** Fun with Custom AppDomains * ****\n");
             // Show all loaded assemblies in default   AppDomain.
             AppDomain defaultAD = AppDomain.CurrentDomain;
+            defaultAD.ProcessExit += (o, s) =>
+            {
+                Console.WriteLine("Default AD unloaded!");
+            };
             ListAllAssembliesInAppDomain(defaultAD);
             // Make a new AppDomain.
             MakeNewAppDomain();
@@ -24,6 +28,10 @@ namespace CustomAppDomains
             // Make a new AppDomain in the current  process and
             // list loaded assemblies.
             AppDomain newAD = AppDomain.CreateDomain("SecondAppDomain");
+            newAD.DomainUnload += (o, s) =>
+            {
+                Console.WriteLine("The second AppDomain has been unloaded!");
+            };
             try
             {
                 // Now load CarLibrary.dll into this new domain.
@@ -34,6 +42,7 @@ namespace CustomAppDomains
                 Console.WriteLine(ex.Message);
             }
             ListAllAssembliesInAppDomain(newAD);
+            AppDomain.Unload(newAD);
         }
         static void ListAllAssembliesInAppDomain(AppDomain ad)
         {
