@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -36,6 +37,9 @@ namespace AsyncCallbackDelegate
         {
             Console.WriteLine("AddComplete() invoked on thread {0}.", Thread.CurrentThread.ManagedThreadId);
             Console.WriteLine("Your addition is complete");
+            AsyncResult ar = (AsyncResult)itfAR;
+            BinaryOp b = (BinaryOp)ar.AsyncDelegate;
+            Console.WriteLine("10 + 10 is {0}.", b.EndInvoke(itfAR));
             isDone = true;
         }
     }
