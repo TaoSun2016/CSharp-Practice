@@ -18,7 +18,7 @@ namespace AsyncCallbackDelegate
             Console.WriteLine("*****AsyncCallbackDelegate Example * ****");
             Console.WriteLine("Main() invoked on thread {0}.", Thread.CurrentThread.ManagedThreadId);
             BinaryOp b = new BinaryOp(Add);
-            IAsyncResult iftAR = b.BeginInvoke(10, 10, new AsyncCallback(AddComplete), null);
+            IAsyncResult iftAR = b.BeginInvoke(10, 10, new AsyncCallback(AddComplete), "Main() thanks you for adding these numbers.");
             // Assume other work is performed here...
             while (!isDone)
             {
@@ -40,6 +40,8 @@ namespace AsyncCallbackDelegate
             AsyncResult ar = (AsyncResult)itfAR;
             BinaryOp b = (BinaryOp)ar.AsyncDelegate;
             Console.WriteLine("10 + 10 is {0}.", b.EndInvoke(itfAR));
+            string msg = (string)itfAR.AsyncState;
+            Console.WriteLine(msg);
             isDone = true;
         }
     }
