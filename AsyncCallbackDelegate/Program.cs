@@ -15,7 +15,7 @@ namespace AsyncCallbackDelegate
         static void Main(string[] args)
         {
             Console.WriteLine("*****AsyncCallbackDelegate Example * ****");
-            Console.WriteLine("Main() invoked on thread { 0}.", Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("Main() invoked on thread {0}.", Thread.CurrentThread.ManagedThreadId);
             BinaryOp b = new BinaryOp(Add);
             IAsyncResult iftAR = b.BeginInvoke(10, 10, new AsyncCallback(AddComplete), null);
             // Assume other work is performed here...
