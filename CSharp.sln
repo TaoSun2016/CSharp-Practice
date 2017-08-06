@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMultiThreadApp", "Sim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddWithThreads", "AddWithThreads\AddWithThreads.csproj", "{B7EA3F90-C84F-4C71-9585-0A2E6AE66E74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimerApp", "TimerApp\TimerApp.csproj", "{65B7B754-A36D-40D4-9B8D-5D887C7D0B89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{B7EA3F90-C84F-4C71-9585-0A2E6AE66E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7EA3F90-C84F-4C71-9585-0A2E6AE66E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7EA3F90-C84F-4C71-9585-0A2E6AE66E74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65B7B754-A36D-40D4-9B8D-5D887C7D0B89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65B7B754-A36D-40D4-9B8D-5D887C7D0B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65B7B754-A36D-40D4-9B8D-5D887C7D0B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65B7B754-A36D-40D4-9B8D-5D887C7D0B89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
