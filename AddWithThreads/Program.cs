@@ -5,6 +5,7 @@ namespace AddWithThreads
 {
     class Program
     {
+        private static AutoResetEvent waitHandle = new AutoResetEvent(false);
         static void Main(string[] args)
         {
             Console.WriteLine("***** Adding with Thread objects * ****");
@@ -14,7 +15,8 @@ namespace AddWithThreads
             Thread t = new Thread(new  ParameterizedThreadStart(Add));
             t.Start(ap);
             // Force a wait to let other thread finish.
-            Thread.Sleep(5);
+            waitHandle.WaitOne();
+            Console.WriteLine("Other thread is done!");
             Console.ReadLine();
         }
         static void Add(object data)
@@ -24,6 +26,7 @@ namespace AddWithThreads
                 Console.WriteLine("ID of thread in Add():{0}", Thread.CurrentThread.ManagedThreadId);
                 AddParams ap = (AddParams)data;
                 Console.WriteLine("{0} + {1} is {2}", ap.a, ap.b, ap.a + ap.b);
+                waitHandle.Set();
             }
         }
     }
