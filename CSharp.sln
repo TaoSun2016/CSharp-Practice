@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectContextApp", "ObjectC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncDelegateReview", "SyncDelegateReview\SyncDelegateReview.csproj", "{F95EF700-34B4-405B-86C9-D9403FB74FCC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncCallbackDelegate", "AsyncCallbackDelegate\AsyncCallbackDelegate.csproj", "{D30FBC95-6F00-4A2E-8E40-62D320403369}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{F95EF700-34B4-405B-86C9-D9403FB74FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F95EF700-34B4-405B-86C9-D9403FB74FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F95EF700-34B4-405B-86C9-D9403FB74FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D30FBC95-6F00-4A2E-8E40-62D320403369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D30FBC95-6F00-4A2E-8E40-62D320403369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D30FBC95-6F00-4A2E-8E40-62D320403369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D30FBC95-6F00-4A2E-8E40-62D320403369}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
