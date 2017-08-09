@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimerApp", "TimerApp\TimerA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPoolApp", "E:\学习\新西兰学习\C#\csharp-6.0-and-.net-4.6-master\9781484213339\9781484213339_Ch19_CodeSamples\Chapter_19\ThreadPoolApp\ThreadPoolApp.csproj", "{0A42EE2C-DC85-4FAF-8271-E414A255F502}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLINQDataProcessingWithCancellation", "PLINQDataProcessingWithCancellation\PLINQDataProcessingWithCancellation.csproj", "{A61DDCFA-024B-4F77-B5AB-E33EC612F17A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -209,6 +211,14 @@ Global
 		{0A42EE2C-DC85-4FAF-8271-E414A255F502}.Release|Any CPU.ActiveCfg = Release|x86
 		{0A42EE2C-DC85-4FAF-8271-E414A255F502}.Release|x86.ActiveCfg = Release|x86
 		{0A42EE2C-DC85-4FAF-8271-E414A255F502}.Release|x86.Build.0 = Release|x86
+		{A61DDCFA-024B-4F77-B5AB-E33EC612F17A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A61DDCFA-024B-4F77-B5AB-E33EC612F17A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A61DDCFA-024B-4F77-B5AB-E33EC612F17A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A61DDCFA-024B-4F77-B5AB-E33EC612F17A}.Debug|x86.Build.0 = Debug|Any CPU
+		{A61DDCFA-024B-4F77-B5AB-E33EC612F17A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A61DDCFA-024B-4F77-B5AB-E33EC612F17A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A61DDCFA-024B-4F77-B5AB-E33EC612F17A}.Release|x86.ActiveCfg = Release|Any CPU
+		{A61DDCFA-024B-4F77-B5AB-E33EC612F17A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
