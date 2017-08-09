@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSharpAsync
@@ -11,15 +12,18 @@ namespace CSharpAsync
             InitializeComponent();
         }
 
-        private void btnCallMethod_Click(object sender, EventArgs e)
+        private async void btnCallMethod_Click(object sender, EventArgs e)
         {
-            this.Text = DoWork();
+            this.Text = await DoWork();
         }
 
-        private string DoWork()
+        private Task<string> DoWork()
         {
-            Thread.Sleep(10000);
-            return "Done with work!";
+            return Task.Run(() =>
+            {
+                Thread.Sleep(10000);
+                return "Done with work!";
+            });
         }
     }
 }
