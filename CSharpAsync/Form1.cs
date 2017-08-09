@@ -1,20 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace CSharpAsync
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void btnCallMethod_Click(object sender, EventArgs e)
+        {
+            this.Text = DoWork();
+        }
+
+        private string DoWork()
+        {
+            Thread.Sleep(10000);
+            return "Done with work!";
         }
     }
 }
