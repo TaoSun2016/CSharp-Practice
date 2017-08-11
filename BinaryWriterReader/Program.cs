@@ -11,7 +11,8 @@ namespace BinaryWriterReader
     {
         static void Main(string[] args)
         {
-            Write();
+            // Write();
+            Read();
         }
         static private void Write()
         {
@@ -33,6 +34,21 @@ namespace BinaryWriterReader
                 bw.Write(aString);
             }
             Console.WriteLine("Done!");
+            Console.ReadLine();
+        }
+        static private void Read()
+        {
+            FileInfo f = new FileInfo("BinFile.dat");
+
+            // Read the binary data from the stream.
+            using (BinaryReader br = new BinaryReader(f.OpenRead()))
+            {
+
+                Console.WriteLine(br.ReadDouble());
+                Console.WriteLine(br.ReadInt32());
+                               
+                Console.WriteLine(br.ReadString());
+            }
             Console.ReadLine();
         }
     }
