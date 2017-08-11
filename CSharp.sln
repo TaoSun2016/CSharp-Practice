@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpAsync", "CSharpAsync\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryApp", "DirectoryApp\DirectoryApp.csproj", "{22578354-16E2-4C28-B1D1-58F8E23CC45D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryWriterReader", "BinaryWriterReader\BinaryWriterReader.csproj", "{25703D6A-9FDC-4AED-9CDF-C0ECFAAD375D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -239,6 +241,14 @@ Global
 		{22578354-16E2-4C28-B1D1-58F8E23CC45D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{22578354-16E2-4C28-B1D1-58F8E23CC45D}.Release|x86.ActiveCfg = Release|Any CPU
 		{22578354-16E2-4C28-B1D1-58F8E23CC45D}.Release|x86.Build.0 = Release|Any CPU
+		{25703D6A-9FDC-4AED-9CDF-C0ECFAAD375D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25703D6A-9FDC-4AED-9CDF-C0ECFAAD375D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25703D6A-9FDC-4AED-9CDF-C0ECFAAD375D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{25703D6A-9FDC-4AED-9CDF-C0ECFAAD375D}.Debug|x86.Build.0 = Debug|Any CPU
+		{25703D6A-9FDC-4AED-9CDF-C0ECFAAD375D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25703D6A-9FDC-4AED-9CDF-C0ECFAAD375D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25703D6A-9FDC-4AED-9CDF-C0ECFAAD375D}.Release|x86.ActiveCfg = Release|Any CPU
+		{25703D6A-9FDC-4AED-9CDF-C0ECFAAD375D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
