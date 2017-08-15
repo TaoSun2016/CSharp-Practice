@@ -92,7 +92,21 @@ namespace CSharp
         }
         static void MathTest()
         {
+            Console.WriteLine(Math.Abs(-13.33));
+            Console.WriteLine(Math.Ceiling(1.33));
+            Console.WriteLine(Math.Floor(1.33));
+            Console.WriteLine(Math.Exp(2));
+            Console.WriteLine(Math.Log(10,100));
+            Console.WriteLine(Math.Log10(100));
+            Console.WriteLine(Math.Max(1,3));
+            Console.WriteLine(Math.Min(1, 3));
+            Console.WriteLine(Math.Pow(2,3));
+            Console.WriteLine(Math.Round(8.3333,2));
+            Console.WriteLine(Math.Sign(-23));
+            Console.WriteLine(Math.Sqrt(3));
 
+            Console.WriteLine(Math.Truncate(9.33));
+        
         }
     }
 }
