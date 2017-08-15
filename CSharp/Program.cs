@@ -42,6 +42,51 @@ namespace CSharp
             {
                 Console.WriteLine(s);
             }
+            Console.WriteLine("==========================================");
+
+            divisionstr = str.Split(new char[] { ' ' }, 2);
+            foreach (string s in divisionstr)
+            {
+                Console.WriteLine("["+s+"]");
+            }
+            Console.WriteLine("==========================================");
+            str = " 梅西| 卡 卡|小龙 ";
+            //divisionstr = str.Split(new char[] { '|', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            divisionstr = str.Split(new char[] { '|', ' ' });
+            foreach (string s in divisionstr)
+            {
+                Console.WriteLine("[" + s + "]");
+            }
+            Console.WriteLine("==========================================");
+
+            str = "梅西|卡卡|小龙";
+            divisionstr = str.Split(new char[] { '|' }, 2, StringSplitOptions.RemoveEmptyEntries);
+            foreach (string s in divisionstr)
+            {
+                Console.WriteLine("[" + s + "]");
+            }
+            Console.WriteLine("==========================================");
+
+
+            str = "地s球很美好，我们s很喜欢";
+            int res = str.IndexOfAny(new char[] { 'f', 'm' });
+            Console.WriteLine(res);
+            Console.WriteLine("==========================================");
+
+            str = "地球很美好，我们很喜欢";
+            res = str.IndexOfAny(new char[] { '球', '我', '喜' }, 2, 5);
+            Console.WriteLine(res);
+
+            Console.WriteLine("==========================================");
+
+            string dest = "Hello world";
+            string source = "Goodbye China";
+            char[] destArray = dest.ToCharArray();//将dest变成字符数组
+            source.CopyTo(8, destArray, 6, 5);//从source的第8个字符起复制5个字符并从destArray的第6个位置开始放
+            dest = new string(destArray);//这时dest为"Hello China"
+            Console.WriteLine(dest);
+            Console.WriteLine("111".Contains("11"));
+
 
         }
 
