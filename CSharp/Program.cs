@@ -34,7 +34,16 @@ namespace CSharp
         static void StringTest()
         {
             Console.WriteLine(string.Join("aa", new string[] { "bb", "cc", "dd" }));
+            Console.WriteLine(string.Join("迎", new char[] { '韩', '龙', '我' ,'c','d'}));
+            Console.WriteLine("==========================================");
+            string str = "I Have a Dream";
+            string[] divisionstr = str.Split(' ');
+            foreach (string s in divisionstr)
+            {
+                Console.WriteLine(s);
+            }
+
         }
-        
+
     }
 }
