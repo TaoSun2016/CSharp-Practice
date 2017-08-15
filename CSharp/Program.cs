@@ -15,7 +15,8 @@ namespace CSharp
             //TestCar();
             //(new ReflectTest()).test();
             //ExternalAssemblyReflector.test();
-            SharedAsmReflector.test();
+            //SharedAsmReflector.test();
+            StringTest();
         }
 
         static void TestCar()
@@ -29,6 +30,10 @@ namespace CSharp
             mv.TurboBoost();
             Console.WriteLine("Done. Press any key to terminate");
             Console.ReadLine();
+        }
+        static void StringTest()
+        {
+            Console.WriteLine(string.Join("aa", new string[] { "bb", "cc", "dd" }));
         }
         
     }
