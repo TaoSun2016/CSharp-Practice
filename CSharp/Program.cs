@@ -16,7 +16,8 @@ namespace CSharp
             //(new ReflectTest()).test();
             //ExternalAssemblyReflector.test();
             //SharedAsmReflector.test();
-            StringTest();
+            //StringTest();
+            MathTest();
         }
 
         static void TestCar()
@@ -89,6 +90,9 @@ namespace CSharp
 
 
         }
+        static void MathTest()
+        {
 
+        }
     }
 }
