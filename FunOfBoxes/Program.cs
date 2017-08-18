@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FunOfBoxes
 {
@@ -18,20 +15,17 @@ namespace FunOfBoxes
             char oldValue = '0';
             char newValue = '0';
             Boxes boxes = new Boxes();
-            boxes.ShowBoxes();
-            do
+            
+           do
             {
                 Console.Clear();
                 boxes.ShowBoxes();
-                
-                Console.WriteLine("Please input a valid box number:");
+                Console.Write($"{tryTimes+1} times try,Please input a valid box number:");
 
-                newIndex = int.Parse(Console.ReadLine());
-                Console.WriteLine($"input[{newIndex}]");
+                newIndex = Convert.ToInt32(Console.ReadLine());
+
                 newValue = boxes.GetValue(newIndex);
-                Console.WriteLine($"value={newValue}");
-
-
+               
                 if (newValue == '0')
                 {
                     continue;
@@ -39,31 +33,38 @@ namespace FunOfBoxes
 
                 tryTimes++;
 
-                if (oldIndex!=-1)
+                if (oldIndex==-1)
                 {
-                    oldValue = boxes.GetValue(oldIndex);
-                }
-                else
-                {
+                    oldIndex = newIndex;
                     oldValue = '0';
+                    continue;
+                    
                 }
-                
-                if (oldValue == newValue)
+
+                oldValue = boxes.GetValue(oldIndex);
+
+                if (oldValue == newValue && oldIndex!=newIndex)
                 {
                     boxes.SetValue(oldIndex,'0');
                     boxes.SetValue(newIndex, '0');
+                    Console.WriteLine($"Good job! You delete two boxes![{oldIndex}][{newIndex}]");
                     if (boxes.GetCount() == 0)
                     {
                         Console.WriteLine("Congratulation! You win!!!");
                         return;
                     }
                     oldIndex = -1;
+                    oldValue = '0';
+                    Console.Write("Press any key to continue:");
+                    Console.ReadLine();
                 }
                 else
                 {
                     oldIndex = newIndex;
+                    oldValue = newValue;
                 }
             } while (tryTimes < MaxTry);
+            Console.WriteLine("Sorry, You failed the game!");
         }
 
    
@@ -90,6 +91,7 @@ namespace FunOfBoxes
         }
         public void ShowBoxes()
         {
+            Console.WriteLine("========================================");
             for (int i=0;i<boxes.Length;i++)
             {
                 if (boxes[i]!='0')
@@ -98,6 +100,7 @@ namespace FunOfBoxes
                 }
             }
             Console.WriteLine();
+            Console.WriteLine("========================================");
         }
 
         public char GetValue(int index)
