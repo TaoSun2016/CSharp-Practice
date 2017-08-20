@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Data.Odbc;
 using System.Data.OleDb;
+using System.Configuration;
 
 namespace MyConnectionFactory
 {
@@ -17,9 +18,25 @@ namespace MyConnectionFactory
         { SqlServer, OleDb, Odbc, None }
         static void Main(string[] args)
         {
-            WriteLine("**** Very Simple Connection Factory * ****\n");
+            WriteLine("**** Very Simple Connection Factory* ****\n");
+            // Read the provider key.
+            string dataProviderString= ConfigurationManager.AppSettings["provider"];
+            // Transform string to enum.
+            DataProvider dataProvider = DataProvider.None;
+            if (Enum.IsDefined(typeof(DataProvider), dataProviderString))
+            {
+                dataProvider = (DataProvider)
+                Enum.Parse(typeof(DataProvider),
+                dataProviderString);
+            }
+            else
+            {
+                WriteLine("Sorry, no provider exists!");
+                ReadLine();
+                return;
+            }
             // Get a specific connection.
-            IDbConnection myConnection = GetConnection(DataProvider.SqlServer);
+            IDbConnection myConnection = GetConnection(dataProvider);
             WriteLine($"Your connection is a { myConnection.GetType().Name}");
             // Open, use and close connection...
             ReadLine();
