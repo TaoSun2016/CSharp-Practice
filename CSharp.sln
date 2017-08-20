@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDirectoryWatcher", "MyDir
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunOfBoxes", "FunOfBoxes\FunOfBoxes.csproj", "{95FCD9D9-8512-475B-8996-83234B2E76AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyConnectionFactory", "MyConnectionFactory\MyConnectionFactory.csproj", "{982B86F0-EBF1-421D-BE1A-948430B35705}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -269,6 +271,14 @@ Global
 		{95FCD9D9-8512-475B-8996-83234B2E76AA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{95FCD9D9-8512-475B-8996-83234B2E76AA}.Release|x86.ActiveCfg = Release|Any CPU
 		{95FCD9D9-8512-475B-8996-83234B2E76AA}.Release|x86.Build.0 = Release|Any CPU
+		{982B86F0-EBF1-421D-BE1A-948430B35705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{982B86F0-EBF1-421D-BE1A-948430B35705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{982B86F0-EBF1-421D-BE1A-948430B35705}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{982B86F0-EBF1-421D-BE1A-948430B35705}.Debug|x86.Build.0 = Debug|Any CPU
+		{982B86F0-EBF1-421D-BE1A-948430B35705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{982B86F0-EBF1-421D-BE1A-948430B35705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{982B86F0-EBF1-421D-BE1A-948430B35705}.Release|x86.ActiveCfg = Release|Any CPU
+		{982B86F0-EBF1-421D-BE1A-948430B35705}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
