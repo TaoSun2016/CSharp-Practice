@@ -24,6 +24,11 @@ namespace CSharp
             {
                 Console.WriteLine("Singleton OK!");
             }
+            Console.WriteLine(s1.ID);
+            Console.WriteLine(s2.ID);
+            s1.ID = 99;
+            Console.WriteLine(s1.ID);
+            Console.WriteLine(s2.ID);
 
         }
 

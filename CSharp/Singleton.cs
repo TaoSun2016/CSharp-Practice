@@ -8,21 +8,16 @@ namespace CSharp
 {
     class Singleton
     {
-        private static Singleton single;
+        private static readonly Singleton single = new Singleton();
         public int ID { get; set; }
 
-        public Singleton()
+        private Singleton()
         {
             ID = 88;
         }
         public static Singleton instance()
         {
-            if (single == null)
-            {
-                single = new Singleton();
-            }
             return single;
-
         }
     }
 }
