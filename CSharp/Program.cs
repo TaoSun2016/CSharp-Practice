@@ -17,7 +17,14 @@ namespace CSharp
             //ExternalAssemblyReflector.test();
             //SharedAsmReflector.test();
             //StringTest();
-            MathTest();
+            //MathTest();
+            Singleton s1 = Singleton.instance();
+            Singleton s2 = Singleton.instance();
+            if (s1 == s2)
+            {
+                Console.WriteLine("Singleton OK!");
+            }
+
         }
 
         static void TestCar()
