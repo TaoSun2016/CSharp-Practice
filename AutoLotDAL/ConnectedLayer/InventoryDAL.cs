@@ -64,5 +64,29 @@ namespace AutoLotDAL.ConnectedLayer
                 command.ExecuteNonQuery();
             }
         }
+
+        public List<NewCar> GetAllInventoryAsList()
+        {
+            // This will hold the records.
+            List<NewCar> inv = new List<NewCar>();
+            // Prep command object.
+            string sql = "Select * From Inventory";
+            using (SqlCommand command = new SqlCommand(sql, _sqlConnection))
+            {
+                SqlDataReader dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    inv.Add(new NewCar
+                    {
+                        CarId = (int)dataReader["CarId"],
+                        Color = (string)dataReader["Color"],
+                        Make = (string)dataReader["Make"],
+                        PetName = (string)dataReader["PetName"]
+                    });
+                }
+                dataReader.Close();
+            }
+            return inv;
+        }
     }
 }
