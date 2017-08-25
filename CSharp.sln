@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProviderFactory", "Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotDataReader", "AutoLotDataReader\AutoLotDataReader.csproj", "{FBC6B959-0A93-4A9F-8A95-B72217DBA3BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotDAL", "AutoLotDAL\AutoLotDAL.csproj", "{B526F3D7-8925-414E-B589-C45C5327E09F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -299,6 +301,14 @@ Global
 		{FBC6B959-0A93-4A9F-8A95-B72217DBA3BD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FBC6B959-0A93-4A9F-8A95-B72217DBA3BD}.Release|x86.ActiveCfg = Release|Any CPU
 		{FBC6B959-0A93-4A9F-8A95-B72217DBA3BD}.Release|x86.Build.0 = Release|Any CPU
+		{B526F3D7-8925-414E-B589-C45C5327E09F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B526F3D7-8925-414E-B589-C45C5327E09F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B526F3D7-8925-414E-B589-C45C5327E09F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B526F3D7-8925-414E-B589-C45C5327E09F}.Debug|x86.Build.0 = Debug|Any CPU
+		{B526F3D7-8925-414E-B589-C45C5327E09F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B526F3D7-8925-414E-B589-C45C5327E09F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B526F3D7-8925-414E-B589-C45C5327E09F}.Release|x86.ActiveCfg = Release|Any CPU
+		{B526F3D7-8925-414E-B589-C45C5327E09F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
