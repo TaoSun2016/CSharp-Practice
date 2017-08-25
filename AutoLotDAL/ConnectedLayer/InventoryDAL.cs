@@ -11,14 +11,14 @@ namespace AutoLotDAL.ConnectedLayer
         private SqlConnection _sqlConnection = null;
         public void OpenConnection(string connectionString)
         {
-            _sqlConnection = new SqlConnection{ ConnectionString = connectionString };
+            _sqlConnection = new SqlConnection { ConnectionString = connectionString };
             _sqlConnection.Open();
         }
         public void CloseConnection()
         {
             _sqlConnection.Close();
         }
-        public void InsertAuto(int id, string color,string make, string petName)
+        public void InsertAuto(int id, string color, string make, string petName)
         {
             // Format and execute SQL statement.
             string sql = "Insert Into Inventory" + $"(Make, Color, PetName) Values ('{make}','{color}', '{petName}')";
@@ -31,7 +31,7 @@ namespace AutoLotDAL.ConnectedLayer
         public void InsertAuto(NewCar car)
         {
             // Format and execute SQL statement.
-            string sql = "Insert Into Inventory" + "( Make, Color, PetName) Values" +  $"('{car.Make}', '{car.Color}','{car.PetName}')";
+            string sql = "Insert Into Inventory" + "( Make, Color, PetName) Values" + $"('{car.Make}', '{car.Color}','{car.PetName}')";
             // Execute using our connection.
             using (SqlCommand command = new SqlCommand(sql, _sqlConnection))
             {
@@ -42,7 +42,7 @@ namespace AutoLotDAL.ConnectedLayer
         {
             // Delete the car with the specified CarId
             string sql = $"Delete from Inventory where CarId = '{id}'";
-            using (SqlCommand command = new SqlCommand(sql,_sqlConnection))
+            using (SqlCommand command = new SqlCommand(sql, _sqlConnection))
             {
                 try
                 {
@@ -87,6 +87,21 @@ namespace AutoLotDAL.ConnectedLayer
                 dataReader.Close();
             }
             return inv;
+        }
+        public DataTable GetAllInventoryAsDataTable()
+        {
+            // This will hold the records.
+            DataTable dataTable = new DataTable();
+            // Prep command object.
+            string sql = "Select * From Inventory";
+            using (SqlCommand cmd = new SqlCommand(sql, _sqlConnection))
+            {
+                SqlDataReader dataReader   = cmd.ExecuteReader();
+                // Fill the DataTable with data from the  reader and clean up.
+                dataTable.Load(dataReader);
+                dataReader.Close();
+            }
+            return dataTable;
         }
     }
 }
