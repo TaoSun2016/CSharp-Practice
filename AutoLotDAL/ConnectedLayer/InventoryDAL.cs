@@ -6,7 +6,7 @@ using System;
 
 namespace AutoLotDAL.ConnectedLayer
 {
-    class InventoryDAL
+    public class InventoryDAL
     {
         private SqlConnection _sqlConnection = null;
         public void OpenConnection(string connectionString)
