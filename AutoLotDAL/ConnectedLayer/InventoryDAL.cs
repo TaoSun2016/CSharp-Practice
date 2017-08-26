@@ -20,11 +20,38 @@ namespace AutoLotDAL.ConnectedLayer
         }
         public void InsertAuto(int id, string color, string make, string petName)
         {
-            // Format and execute SQL statement.
-            string sql = "Insert Into Inventory" + $"(Make, Color, PetName) Values ('{make}','{color}', '{petName}')";
-            // Execute using our connection.
+            // Note the "placeholders" in the SQL query.
+            string sql = "Insert Into Inventory" +
+            "(Make, Color, PetName) Values" +
+            "(@Make, @Color, @PetName)";
+            // This command will have internal parameters.
             using (SqlCommand command = new SqlCommand(sql, _sqlConnection))
             {
+                // Fill params collection.
+                SqlParameter parameter = new SqlParameter
+                {
+                    ParameterName = "@Make",
+                    Value = make,
+                    SqlDbType = SqlDbType.Char,
+                    Size = 10
+                };
+                command.Parameters.Add(parameter);
+                parameter = new SqlParameter
+                {
+                    ParameterName = "@Color",
+                    Value = color,
+                    SqlDbType = SqlDbType.Char,
+                    Size = 10
+                };
+                command.Parameters.Add(parameter);
+                parameter = new SqlParameter
+                {
+                    ParameterName = "@PetName",
+                    Value = petName,
+                    SqlDbType = SqlDbType.Char,
+                    Size = 10
+                };
+                command.Parameters.Add(parameter);
                 command.ExecuteNonQuery();
             }
         }
