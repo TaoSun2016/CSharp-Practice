@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B526F3D7-8925-414E-B589-C45C5327E09F}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>AutoLotDAL</RootNamespace>
-    <AssemblyName>AutoLotDAL</AssemblyName>
+    <ProjectGuid>{8C9B585F-2C53-43F0-BBF6-820D612CBA75}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AutoLotCUIClient</RootNamespace>
+    <AssemblyName>AutoLotCUIClient</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,11 +31,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoLotDAL">
+      <HintPath>..\AutoLotDAL\bin\Debug\AutoLotDAL.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,8 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConnectedLayer\InventoryDAL.cs" />
-    <Compile Include="Models\NewCar.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
