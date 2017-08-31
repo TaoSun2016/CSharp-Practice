@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Collections.Generic;
 using AutoLotDAL.Models;
 using System;
+using static System.Console;
 
 namespace AutoLotDAL.ConnectedLayer
 {
@@ -164,6 +165,56 @@ namespace AutoLotDAL.ConnectedLayer
             }
             return carPetName;
         }
+        // A new member of the InventoryDAL class.
+        public void ProcessCreditRisk(bool throwEx, int custID)
+        {
+            // First, look up current name based on customer ID.
+            string fName;
+            string lName;
+            var cmdSelect =
+            new SqlCommand($"Select * from Customers where CustId = { custID }", _sqlConnection);
+            using (var dataReader = cmdSelect.ExecuteReader())
+            {
+                if (dataReader.HasRows)
+                {
+                    dataReader.Read();
+                    fName = (string)dataReader["FirstName"];
+                    lName = (string)dataReader["LastName"];
+                }
+                else
+                {
+                    return;
+                }
+            }
+            // Create command objects that represent each step of the operation.
+            var cmdRemove = new SqlCommand($"Delete from Customers where CustId = { custID }",_sqlConnection);
+            var cmdInsert = new SqlCommand("Insert Into CreditRisks" + $"(FirstName, LastName) Values('{fName}','{lName}')",_sqlConnection);
+            // We will get this from the connection object.
+            SqlTransaction tx = null;
+            try
+            {
+                tx = _sqlConnection.BeginTransaction();
+                // Enlist the commands into this transaction.
+                cmdInsert.Transaction = tx;
+                cmdRemove.Transaction = tx;
+                // Execute the commands.
+                cmdInsert.ExecuteNonQuery();
+                cmdRemove.ExecuteNonQuery();
+                // Simulate error.
+                if (throwEx)
+                {
+                    throw new Exception("Sorry! Database error!Tx failed...");
+                }
+                // Commit it!
+                tx.Commit();
+            }
+            catch (Exception ex)
+            {
+                WriteLine(ex.Message);
+                // Any error will roll back transaction.
+                // Using the new conditional access operator to check for null.
+                tx?.Rollback();
+            }
+        }
     }
-
 }
