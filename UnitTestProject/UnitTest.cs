@@ -1,12 +1,11 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
 
 namespace UnitTestProject
 {
-    [TestClass]
-    public class UnitTest
+     public class UnitTest
     {
-        [TestMethod]
+        [Fact]
         public void TestAdd()
         {
             //Arrange
@@ -15,7 +14,7 @@ namespace UnitTestProject
             //Action
             int result = MyMath.Add(num1, num2);
             //Assert
-            Assert.AreEqual(result,num1+num2);
+            Assert.Equal(result,num1+num2);
         }
     }
 }
