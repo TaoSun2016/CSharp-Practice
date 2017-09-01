@@ -67,6 +67,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotCUIClient", "AutoLot
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetTransaction", "AdoNetTransaction\AdoNetTransaction.csproj", "{0A4CF188-868B-4371-A837-C46C058BEB76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{D33BC0D1-0D3A-4E6C-AB72-8546EEB39CE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -329,6 +331,14 @@ Global
 		{0A4CF188-868B-4371-A837-C46C058BEB76}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0A4CF188-868B-4371-A837-C46C058BEB76}.Release|x86.ActiveCfg = Release|Any CPU
 		{0A4CF188-868B-4371-A837-C46C058BEB76}.Release|x86.Build.0 = Release|Any CPU
+		{D33BC0D1-0D3A-4E6C-AB72-8546EEB39CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33BC0D1-0D3A-4E6C-AB72-8546EEB39CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33BC0D1-0D3A-4E6C-AB72-8546EEB39CE5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D33BC0D1-0D3A-4E6C-AB72-8546EEB39CE5}.Debug|x86.Build.0 = Debug|Any CPU
+		{D33BC0D1-0D3A-4E6C-AB72-8546EEB39CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33BC0D1-0D3A-4E6C-AB72-8546EEB39CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33BC0D1-0D3A-4E6C-AB72-8546EEB39CE5}.Release|x86.ActiveCfg = Release|Any CPU
+		{D33BC0D1-0D3A-4E6C-AB72-8546EEB39CE5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
