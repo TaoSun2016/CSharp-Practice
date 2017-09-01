@@ -38,10 +38,22 @@ namespace SimpleDataSet
             var carPetNameColumn = new DataColumn("PetName", typeof(string)) {Caption="Pet Name"};
 
             var inventoryTable = new DataTable("Inventory");
-            inventoryTable.Columns.AddRange(new[]
-            {carIDColumn, carMakeColumn, carColorColumn, carPetNameColumn});
+            inventoryTable.Columns.AddRange(new[]{carIDColumn, carMakeColumn, carColorColumn, carPetNameColumn});
             inventoryTable.PrimaryKey = new[] {inventoryTable.Columns[0] };
             ds.Tables.Add(inventoryTable);
+            // Now add some rows to the Inventory Table.
+            DataRow carRow = inventoryTable.NewRow();
+            carRow["Make"] = "BMW";
+            carRow["Color"] = "Black";
+            carRow["PetName"] = "Hamlet";
+            inventoryTable.Rows.Add(carRow);
+            carRow = inventoryTable.NewRow();
+            // Column 0 is the autoincremented ID field,
+            // so start at 1.
+            carRow[1] = "Saab";
+            carRow[2] = "Red";
+            carRow[3] = "Sea Breeze";
+            inventoryTable.Rows.Add(carRow);
         }
 
         static void PrintDataSet(DataSet ds)
