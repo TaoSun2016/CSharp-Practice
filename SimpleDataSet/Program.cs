@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
+using System.Collections;
 
 namespace SimpleDataSet
 {
@@ -34,17 +35,48 @@ namespace SimpleDataSet
             };
             var carMakeColumn = new DataColumn("Make",typeof(string));
             var carColorColumn = new DataColumn("Color",typeof(string));
-            var carPetNameColumn = new DataColumn("PetName", typeof(string)) { Caption="Pet Name"};
+            var carPetNameColumn = new DataColumn("PetName", typeof(string)) {Caption="Pet Name"};
 
             var inventoryTable = new DataTable("Inventory");
             inventoryTable.Columns.AddRange(new[]
             {carIDColumn, carMakeColumn, carColorColumn, carPetNameColumn});
-            inventoryTable.PrimaryKey = new[] { inventoryTable.Columns[0] };
+            inventoryTable.PrimaryKey = new[] {inventoryTable.Columns[0] };
             ds.Tables.Add(inventoryTable);
         }
 
-        static void PrintDataSet(DataSet ds) { }
-        private static void ManipulateDataRowState()
+        static void PrintDataSet(DataSet ds)
+        {// Print out the DataSet name and any extended properties.
+            WriteLine($"DataSet is named:{ds.DataSetName}");
+            foreach (DictionaryEntry de in ds.ExtendedProperties)
+            {
+                WriteLine($"Key = {de.Key}, Value = {de.Value}");
+            }
+            WriteLine();
+
+            // Print out each table using rows and columns. 
+            foreach (DataTable dt in ds.Tables)
+            {
+                WriteLine($"=> {dt.TableName} Table:");
+
+                // Print out the column names.
+                for (var curCol = 0; curCol < dt.Columns.Count; curCol++)
+                {
+                    Write($"{dt.Columns[curCol].ColumnName}\t");
+                }
+                WriteLine("\n----------------------------------");
+
+                // Print the DataTable.
+                for (var curRow = 0; curRow < dt.Rows.Count; curRow++)
+                {
+                    for (var curCol = 0; curCol < dt.Columns.Count; curCol++)
+                    {
+                        Write($"{dt.Rows[curRow][curCol]}\t");
+                    }
+                    WriteLine();
+                }
+            }
+        }
+            private static void ManipulateDataRowState()
         {
             // Create a temp DataTable for testing.
             var temp = new DataTable("Temp");
