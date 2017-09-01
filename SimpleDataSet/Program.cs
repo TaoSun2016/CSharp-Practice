@@ -39,6 +39,8 @@ namespace SimpleDataSet
             var inventoryTable = new DataTable("Inventory");
             inventoryTable.Columns.AddRange(new[]
             {carIDColumn, carMakeColumn, carColorColumn, carPetNameColumn});
+            inventoryTable.PrimaryKey = new[] { inventoryTable.Columns[0] };
+            ds.Tables.Add(inventoryTable);
         }
 
         static void PrintDataSet(DataSet ds) { }
