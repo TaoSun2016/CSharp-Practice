@@ -34,6 +34,12 @@ namespace CSharp
             int [] tstArray = new int [] {1,2,3,4,5 };
             func1(ref tstArray);
 
+            int x = 4, b = 2;
+            b /= 8;
+            Console.WriteLine(b);
+            x -= (b);
+            Console.WriteLine(x + " " + b);
+            Console.ReadLine();
         }
         static void func1(ref int[] arr)
         {
