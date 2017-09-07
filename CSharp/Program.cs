@@ -18,6 +18,7 @@ namespace CSharp
             //SharedAsmReflector.test();
             //StringTest();
             //MathTest();
+            /*
             Singleton s1 = Singleton.instance();
             Singleton s2 = Singleton.instance();
             if (s1 == s2)
@@ -29,9 +30,19 @@ namespace CSharp
             s1.ID = 99;
             Console.WriteLine(s1.ID);
             Console.WriteLine(s2.ID);
+            */
+            int [] tstArray = new int [] {1,2,3,4,5 };
+            func1(ref tstArray);
 
         }
-
+        static void func1(ref int[] arr)
+        {
+            for (int i=0;i<arr.Length;i+=2)
+            {
+                arr[i] += 10;
+            }
+            Console.WriteLine(string.Join(",",arr));
+        }
         static void TestCar()
         {
             Console.WriteLine("***** C# CarLibrary  Client App * ****");
