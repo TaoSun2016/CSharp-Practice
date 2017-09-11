@@ -31,6 +31,7 @@ namespace CSharp
             Console.WriteLine(s1.ID);
             Console.WriteLine(s2.ID);
             */
+            /*
             int [] tstArray = new int [] {1,2,3,4,5 };
             func1(ref tstArray);
 
@@ -40,6 +41,8 @@ namespace CSharp
             x -= (b);
             Console.WriteLine(x + " " + b);
             Console.ReadLine();
+            */
+            Console.WriteLine("Hello world!");
         }
         static void func1(ref int[] arr)
         {
