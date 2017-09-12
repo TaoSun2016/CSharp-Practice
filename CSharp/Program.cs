@@ -42,7 +42,20 @@ namespace CSharp
             Console.WriteLine(x + " " + b);
             Console.ReadLine();
             */
-            Console.WriteLine("Hello world!");
+            //Console.WriteLine("Hello world!");
+            HondaCar honda = new HondaCar() { RegisterNumber="88888",Seats=5,Wheels=5,Windows=4};
+            BMWCar bmw = new BMWCar() { RegisterNumber = "55555", Seats = 5, Wheels = 5, Windows = 4 };
+            Console.WriteLine("HONDA");
+            Console.WriteLine("Honda's register number is :{0}.",honda.GetRegisterNumber());
+            Console.WriteLine("Honda's seat number is :{0}.", honda.GetSeatsNumber());
+            Console.WriteLine("Honda's wheel number is :{0}.", honda.GetWheelsNumber());
+            Console.WriteLine("Honda's window number is :{0}.", honda.GetWindowsNumber());
+
+            Console.WriteLine("BMW");
+            Console.WriteLine("BMW's register number is :{0}.", bmw.GetRegisterNumber());
+            Console.WriteLine("BMW's seat number is :{0}.", bmw.GetSeatsNumber());
+            Console.WriteLine("BMW's wheel number is :{0}.", bmw.GetWheelsNumber());
+            Console.WriteLine("BMW's window number is :{0}.", bmw.GetWindowsNumber());
         }
         static void func1(ref int[] arr)
         {
