@@ -48,6 +48,7 @@
     <Compile Include="BMWCar.cs" />
     <Compile Include="Car.cs" />
     <Compile Include="ExternalAssemblyReflector.cs" />
+    <Compile Include="HondaCar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReflectTest.cs" />
