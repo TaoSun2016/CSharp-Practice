@@ -43,6 +43,7 @@ namespace CSharp
             Console.ReadLine();
             */
             //Console.WriteLine("Hello world!");
+            /*
             HondaCar honda = new HondaCar() { RegisterNumber="88888",Seats=5,Wheels=5,Windows=4};
             BMWCar bmw = new BMWCar() { RegisterNumber = "55555", Seats = 5, Wheels = 5, Windows = 4 };
             Console.WriteLine("HONDA");
@@ -56,6 +57,48 @@ namespace CSharp
             Console.WriteLine("BMW's seat number is :{0}.", bmw.GetSeatsNumber());
             Console.WriteLine("BMW's wheel number is :{0}.", bmw.GetWheelsNumber());
             Console.WriteLine("BMW's window number is :{0}.", bmw.GetWindowsNumber());
+            */
+            int num1, num2,result;
+            string operand;
+            string inputString;
+            try
+            {
+                Console.Write("Please input a number:");
+                num1 = int.Parse(Console.ReadLine());
+                Console.Write("Please input a operand:");
+                operand = Console.ReadLine().Trim();
+                Console.Write("Please input another number:");
+                num2 = int.Parse(Console.ReadLine());
+
+                switch (operand)
+                {
+                    case "+":
+                        result = num1 + num2;
+                        break;
+                    case "-":
+                        result = num1 - num2;
+                        break;
+                    case "*":
+                        result = num1 * num2;
+                        break;
+                    case "/":
+                        result = num1 / num2;
+                        break;
+                    default:
+                        result = -1;
+                        break;
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                return;
+            }
+            finally
+            {
+            }
+            Console.WriteLine("Result is :{0}.",result);
+            
         }
         static void func1(ref int[] arr)
         {
