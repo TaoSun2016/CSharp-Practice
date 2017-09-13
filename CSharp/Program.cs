@@ -58,6 +58,7 @@ namespace CSharp
             Console.WriteLine("BMW's wheel number is :{0}.", bmw.GetWheelsNumber());
             Console.WriteLine("BMW's window number is :{0}.", bmw.GetWindowsNumber());
             */
+            /*
             int num1, num2,result;
             string operand;
             string inputString;
@@ -98,7 +99,45 @@ namespace CSharp
             {
             }
             Console.WriteLine("Result is :{0}.",result);
+            */
+            //LINQ
+
+            List<string> testList = new List<string> { "a", "aa", "aaa", "b", "bb", "bbb", "c", "cc", "ccc", "abc", "abcdefg" };
+
+            var totalA = testList.Where(x => x == "a" || x == "c");
+            var containB = testList.Contains("b");
+            var containF = testList.Contains("f");
+            var groupByString = testList.GroupBy(a=>a);
+            var firstElement = testList.First();
+            var lastElement = testList.Last();
+            var firstDefault = testList.Where(a => a == "a").FirstOrDefault();
+            Console.WriteLine("totalA");
+            foreach (var i in totalA)
+            {
+                Console.WriteLine(i);
+            }
             
+            Console.WriteLine("containB=" + containB);
+
+            Console.WriteLine("containF=" + containF);
+
+            Console.WriteLine("groupByString" );
+            foreach (var i in groupByString)
+            {
+                Console.WriteLine("Key="+i.Key);
+                foreach (var j in i)
+                {
+                    Console.WriteLine(j);
+                }
+            }
+
+            Console.WriteLine("firstElement=" + firstElement);
+
+            Console.WriteLine("firstElement=" + lastElement);
+
+            Console.WriteLine("firstDefault=" + firstDefault);
+            
+
         }
         static void func1(ref int[] arr)
         {
