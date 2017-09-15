@@ -110,7 +110,7 @@ namespace CSharp
             var groupByString = testList.GroupBy(a=>a);
             var firstElement = testList.First();
             var lastElement = testList.Last();
-            var firstDefault = testList.Where(a => a == "a").FirstOrDefault();
+            var firstDefault = testList.Where(a => a == "x").FirstOrDefault();
             Console.WriteLine("totalA");
             foreach (var i in totalA)
             {
@@ -135,7 +135,7 @@ namespace CSharp
 
             Console.WriteLine("firstElement=" + lastElement);
 
-            Console.WriteLine("firstDefault=" + firstDefault);
+            Console.WriteLine("firstDefault=[" + firstDefault+"]");
             
 
         }
