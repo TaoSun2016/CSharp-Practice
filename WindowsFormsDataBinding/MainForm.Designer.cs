@@ -30,13 +30,17 @@
         {
             this.carInventoryGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCarToRemove = new System.Windows.Forms.TextBox();
+            this.btnRemoveCar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.carInventoryGridView)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // carInventoryGridView
             // 
             this.carInventoryGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.carInventoryGridView.Location = new System.Drawing.Point(21, 63);
+            this.carInventoryGridView.Location = new System.Drawing.Point(21, 36);
             this.carInventoryGridView.Name = "carInventoryGridView";
             this.carInventoryGridView.RowTemplate.Height = 23;
             this.carInventoryGridView.Size = new System.Drawing.Size(240, 150);
@@ -52,17 +56,48 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Here is what we have in stock";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnRemoveCar);
+            this.groupBox1.Controls.Add(this.txtCarToRemove);
+            this.groupBox1.Location = new System.Drawing.Point(21, 192);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(240, 43);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // txtCarToRemove
+            // 
+            this.txtCarToRemove.Location = new System.Drawing.Point(3, 17);
+            this.txtCarToRemove.Name = "txtCarToRemove";
+            this.txtCarToRemove.Size = new System.Drawing.Size(100, 21);
+            this.txtCarToRemove.TabIndex = 0;
+            // 
+            // btnRemoveCar
+            // 
+            this.btnRemoveCar.Location = new System.Drawing.Point(131, 14);
+            this.btnRemoveCar.Name = "btnRemoveCar";
+            this.btnRemoveCar.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveCar.TabIndex = 1;
+            this.btnRemoveCar.Text = "Delete";
+            this.btnRemoveCar.UseVisualStyleBackColor = true;
+            this.btnRemoveCar.Click += new System.EventHandler(this.btnRemoveCar_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.carInventoryGridView);
             this.Name = "MainForm";
             this.Text = "Windows Forms Data Binding";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.carInventoryGridView)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,6 +107,9 @@
 
         private System.Windows.Forms.DataGridView carInventoryGridView;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnRemoveCar;
+        private System.Windows.Forms.TextBox txtCarToRemove;
     }
 }
 
