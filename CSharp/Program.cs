@@ -101,7 +101,7 @@ namespace CSharp
             Console.WriteLine("Result is :{0}.",result);
             */
             //LINQ
-
+            /*
             List<string> testList = new List<string> { "a", "aa", "aaa", "b", "bb", "bbb", "c", "cc", "ccc", "abc", "abcdefg" };
 
             var totalA = testList.Where(x => x == "a" || x == "c");
@@ -136,6 +136,10 @@ namespace CSharp
             Console.WriteLine("firstElement=" + lastElement);
 
             Console.WriteLine("firstDefault=[" + firstDefault+"]");
+            */
+            string inputParameter =  Console.ReadLine();
+            string[] arrayParameter = inputParameter.Split(new[] { ' ' });
+            Console.WriteLine(GetSum(int.Parse(arrayParameter[0]),int.Parse(arrayParameter[1])));
             
 
         }
@@ -233,6 +237,31 @@ namespace CSharp
             Console.WriteLine(Math.Sqrt(3));
             Console.WriteLine(Math.Truncate(9.33));
         
+        }
+
+        public static int GetSum(int num1, int num2)
+        {
+            int sum = 0;
+            for (int i = num1 + 1; i <= num2; i++)
+            {
+                if (IsPrime(i))
+                {
+                    sum += i;
+                }
+            }
+            return sum;
+
+        }
+        public static bool IsPrime(int num)
+        {
+            for (int i = 2; i < (num / 2 + 1); i++)
+            {
+                if (num % i == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
