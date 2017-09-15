@@ -22,6 +22,7 @@ namespace SimpleDataSet
             carsInventoryDS.ExtendedProperties["Company"] = "Mikko’s Hot Tub Super Store";
 
             FillDataSet(carsInventoryDS);
+            SaveLoadXml(carsInventoryDS);
             PrintDataSet(carsInventoryDS);
             ReadLine();
         }
@@ -124,6 +125,14 @@ namespace SimpleDataSet
                 WriteLine();
             }
             dtReader.Close();
+        }
+
+        static void SaveLoadXml(DataSet carInventoryDS)
+        {
+            carInventoryDS.WriteXml("CarInverntory.xml");
+            carInventoryDS.WriteXmlSchema("CarInventory.xsd");
+            carInventoryDS.Clear();
+            carInventoryDS.ReadXml("CarInverntory.xml");
         }
     }
 }
