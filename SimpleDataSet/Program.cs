@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
 using System.Collections;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace SimpleDataSet
 {
@@ -22,7 +24,10 @@ namespace SimpleDataSet
             carsInventoryDS.ExtendedProperties["Company"] = "Mikko’s Hot Tub Super Store";
 
             FillDataSet(carsInventoryDS);
-            SaveLoadXml(carsInventoryDS);
+            PrintDataSet(carsInventoryDS);
+            // SaveLoadXml(carsInventoryDS);
+            SaveLoadBinary(carsInventoryDS);
+            Console.WriteLine("==========================");
             PrintDataSet(carsInventoryDS);
             ReadLine();
         }
@@ -133,6 +138,21 @@ namespace SimpleDataSet
             carInventoryDS.WriteXmlSchema("CarInventory.xsd");
             carInventoryDS.Clear();
             carInventoryDS.ReadXml("CarInverntory.xml");
+        }
+
+        static void SaveLoadBinary(DataSet carInventoryDS)
+        {
+            carInventoryDS.RemotingFormat = SerializationFormat.Binary;
+            FileStream fs = new FileStream("BinaryInfor.bin",FileMode.Create);
+            BinaryFormatter bFormatter = new BinaryFormatter();
+            bFormatter.Serialize(fs,carInventoryDS);
+            fs.Close();
+
+            carInventoryDS.Clear();
+
+            fs = new FileStream("BinaryInfor.bin", FileMode.Open);
+            carInventoryDS =(DataSet)bFormatter.Deserialize(fs);
+
         }
     }
 }
