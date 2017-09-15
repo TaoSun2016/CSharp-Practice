@@ -118,5 +118,19 @@ namespace SimpleDataSet
                temp.Rows[0].Delete();
             WriteLine($"After calling Delete:{row.RowState}");
         }
+
+        static void PrintTable(DataTable dt)
+        {
+            DataTableReader dtReader = dt.CreateDataReader();
+            while (dtReader.Read())
+            {
+                for (int i=0;i<dtReader.FieldCount;i++)
+                {
+                    Write($"{dtReader.GetValue(i).ToString().Trim()}  ");
+                }
+                WriteLine();
+            }
+            dtReader.Close();
+        }
     }
 }
