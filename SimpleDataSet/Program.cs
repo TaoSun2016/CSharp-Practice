@@ -78,14 +78,7 @@ namespace SimpleDataSet
                 WriteLine("\n----------------------------------");
 
                 // Print the DataTable.
-                for (var curRow = 0; curRow < dt.Rows.Count; curRow++)
-                {
-                    for (var curCol = 0; curCol < dt.Columns.Count; curCol++)
-                    {
-                        Write($"{dt.Rows[curRow][curCol]}\t");
-                    }
-                    WriteLine();
-                }
+                PrintTable(dt);
             }
         }
             private static void ManipulateDataRowState()
