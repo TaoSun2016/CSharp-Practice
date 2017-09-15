@@ -61,6 +61,7 @@
             this.Controls.Add(this.carInventoryGridView);
             this.Name = "MainForm";
             this.Text = "Windows Forms Data Binding";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.carInventoryGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
