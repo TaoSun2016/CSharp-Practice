@@ -254,13 +254,22 @@ namespace CSharp
         }
         public static bool IsPrime(int num)
         {
-            for (int i = 2; i < (num / 2 + 1); i++)
+            if (num == 1 || num== 2||num==3)
+            {
+                Console.WriteLine("{0} is prime number", num);
+
+                return true;
+            }
+            for (int i = 2; i < (Math.Sqrt(num)+1); i++)
             {
                 if (num % i == 0)
                 {
+                    Console.WriteLine("{0} is not prime number", num);
+
                     return false;
                 }
             }
+            Console.WriteLine("{0} is prime number",num);
             return true;
         }
     }
