@@ -272,5 +272,16 @@ namespace CSharp
             Console.WriteLine("{0} is prime number",num);
             return true;
         }
+        public static long GetSumOfEven1(int [] inputArray)
+        {
+            return inputArray.Where(a => a % 2 == 0).Sum(a=>(long)a);
+        }
+
+        public static long GetSumOfEven2(int[] inputArray)
+        {
+            return (from i in inputArray
+                    where i%2==0
+                    select (long)i).Sum();
+        }
     }
 }
