@@ -12,6 +12,7 @@ namespace CSharp
     {
         static string testStr;
         static DateTime testDate;
+        static int? testInt;
         static void Main(string[] args)
         {
             //TestCar();
@@ -147,6 +148,8 @@ namespace CSharp
 
             Console.WriteLine((testStr == null)?"testStr is null":testStr);
             Console.WriteLine((testDate == null)?"testDate is null":testDate.ToString());
+            Console.WriteLine(testInt == null?"testInt is null":testInt.ToString());
+
 
         }
 
