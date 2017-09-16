@@ -31,10 +31,14 @@
             this.carInventoryGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtCarToRemove = new System.Windows.Forms.TextBox();
             this.btnRemoveCar = new System.Windows.Forms.Button();
+            this.txtCarToRemove = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtMakeToView = new System.Windows.Forms.TextBox();
+            this.btnDisplayMakes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.carInventoryGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // carInventoryGridView
@@ -43,7 +47,7 @@
             this.carInventoryGridView.Location = new System.Drawing.Point(21, 36);
             this.carInventoryGridView.Name = "carInventoryGridView";
             this.carInventoryGridView.RowTemplate.Height = 23;
-            this.carInventoryGridView.Size = new System.Drawing.Size(240, 150);
+            this.carInventoryGridView.Size = new System.Drawing.Size(496, 150);
             this.carInventoryGridView.TabIndex = 0;
             // 
             // label1
@@ -67,13 +71,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // txtCarToRemove
-            // 
-            this.txtCarToRemove.Location = new System.Drawing.Point(3, 17);
-            this.txtCarToRemove.Name = "txtCarToRemove";
-            this.txtCarToRemove.Size = new System.Drawing.Size(100, 21);
-            this.txtCarToRemove.TabIndex = 0;
-            // 
             // btnRemoveCar
             // 
             this.btnRemoveCar.Location = new System.Drawing.Point(131, 14);
@@ -84,11 +81,46 @@
             this.btnRemoveCar.UseVisualStyleBackColor = true;
             this.btnRemoveCar.Click += new System.EventHandler(this.btnRemoveCar_Click);
             // 
+            // txtCarToRemove
+            // 
+            this.txtCarToRemove.Location = new System.Drawing.Point(3, 17);
+            this.txtCarToRemove.Name = "txtCarToRemove";
+            this.txtCarToRemove.Size = new System.Drawing.Size(100, 21);
+            this.txtCarToRemove.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnDisplayMakes);
+            this.groupBox2.Controls.Add(this.txtMakeToView);
+            this.groupBox2.Location = new System.Drawing.Point(306, 192);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(195, 43);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // txtMakeToView
+            // 
+            this.txtMakeToView.Location = new System.Drawing.Point(3, 17);
+            this.txtMakeToView.Name = "txtMakeToView";
+            this.txtMakeToView.Size = new System.Drawing.Size(100, 21);
+            this.txtMakeToView.TabIndex = 0;
+            // 
+            // btnDisplayMakes
+            // 
+            this.btnDisplayMakes.Location = new System.Drawing.Point(109, 15);
+            this.btnDisplayMakes.Name = "btnDisplayMakes";
+            this.btnDisplayMakes.Size = new System.Drawing.Size(75, 23);
+            this.btnDisplayMakes.TabIndex = 1;
+            this.btnDisplayMakes.Text = "View";
+            this.btnDisplayMakes.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(545, 261);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.carInventoryGridView);
@@ -98,6 +130,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.carInventoryGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,6 +144,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnRemoveCar;
         private System.Windows.Forms.TextBox txtCarToRemove;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnDisplayMakes;
+        private System.Windows.Forms.TextBox txtMakeToView;
     }
 }
 
