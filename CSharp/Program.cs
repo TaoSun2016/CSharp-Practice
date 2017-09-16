@@ -10,6 +10,8 @@ namespace CSharp
 {
     public class Program
     {
+        static string testStr;
+        static DateTime testDate;
         static void Main(string[] args)
         {
             //TestCar();
@@ -137,12 +139,20 @@ namespace CSharp
 
             Console.WriteLine("firstDefault=[" + firstDefault+"]");
             */
+            /*
             string inputParameter =  Console.ReadLine();
             string[] arrayParameter = inputParameter.Split(new[] { ' ' });
             Console.WriteLine(GetSum(int.Parse(arrayParameter[0]),int.Parse(arrayParameter[1])));
-            
+            */
+
+            Console.WriteLine((testStr == null)?"testStr is null":testStr);
+            Console.WriteLine((testDate == null)?"testDate is null":testDate.ToString());
 
         }
+
+
+
+
         static void func1(ref int[] arr)
         {
             for (int i=0;i<arr.Length;i+=2)
