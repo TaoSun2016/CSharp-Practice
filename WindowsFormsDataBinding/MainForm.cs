@@ -14,6 +14,7 @@ namespace WindowsFormsDataBinding
     {
         List<Car> listCar = null;
         DataTable inventoryTable = new DataTable();
+        DataView yugosOnlyView;
         public MainForm()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace WindowsFormsDataBinding
                 new Car { Id = 8, PetName = "Sarah", Make = "Colt", Color = "Black" },
              };
             CreateTable();
+            CreateDataView();
         }
 
         void CreateTable()
@@ -48,6 +50,12 @@ namespace WindowsFormsDataBinding
             }
             carInventoryGridView.DataSource = inventoryTable;
 
+        }
+        private void CreateDataView()
+        {
+            yugosOnlyView = new DataView(inventoryTable);
+            yugosOnlyView.RowFilter = "Make='Yugo'";
+            dataGridYugosView.DataSource = yugosOnlyView;
         }
         private void MainForm_Load(object sender, EventArgs e)
         {

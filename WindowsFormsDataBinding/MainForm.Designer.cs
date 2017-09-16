@@ -38,9 +38,12 @@
             this.txtMakeToView = new System.Windows.Forms.TextBox();
             this.ShowIDGT5 = new System.Windows.Forms.Button();
             this.ChangeBMW = new System.Windows.Forms.Button();
+            this.dataGridYugosView = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.carInventoryGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridYugosView)).BeginInit();
             this.SuspendLayout();
             // 
             // carInventoryGridView
@@ -138,11 +141,31 @@
             this.ChangeBMW.UseVisualStyleBackColor = true;
             this.ChangeBMW.Click += new System.EventHandler(this.ChangeBMW_Click);
             // 
+            // dataGridYugosView
+            // 
+            this.dataGridYugosView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridYugosView.Location = new System.Drawing.Point(550, 36);
+            this.dataGridYugosView.Name = "dataGridYugosView";
+            this.dataGridYugosView.RowTemplate.Height = 23;
+            this.dataGridYugosView.Size = new System.Drawing.Size(381, 150);
+            this.dataGridYugosView.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(562, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 12);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "dataGridYugosView";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 334);
+            this.ClientSize = new System.Drawing.Size(964, 334);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dataGridYugosView);
             this.Controls.Add(this.ChangeBMW);
             this.Controls.Add(this.ShowIDGT5);
             this.Controls.Add(this.groupBox2);
@@ -157,6 +180,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridYugosView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,6 +198,8 @@
         private System.Windows.Forms.TextBox txtMakeToView;
         private System.Windows.Forms.Button ShowIDGT5;
         private System.Windows.Forms.Button ChangeBMW;
+        private System.Windows.Forms.DataGridView dataGridYugosView;
+        private System.Windows.Forms.Label label2;
     }
 }
 
