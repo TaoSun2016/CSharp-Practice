@@ -68,5 +68,24 @@ namespace WindowsFormsDataBinding
             }
 
         }
+
+        private void btnDisplayMakes_Click(object sender, EventArgs e)
+        {
+            string stringFilter = $"Make = '{txtMakeToView.Text.Trim()}'";
+            DataRow[] carRecords = inventoryTable.Select(stringFilter);
+            if (carRecords.Length <=0 )
+            {
+                MessageBox.Show("There's no search result!");
+            }
+            else
+            {
+                string stringResult = null;
+                for (int i = 0; i<carRecords.Count();i++)
+                {
+                    stringResult += carRecords[i]["PetName"]+"\n";
+                }
+                MessageBox.Show(stringResult,$"We have {txtMakeToView.Text}s named:");
+            }
+        }
     }
 }

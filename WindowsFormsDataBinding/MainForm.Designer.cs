@@ -114,6 +114,7 @@
             this.btnDisplayMakes.TabIndex = 1;
             this.btnDisplayMakes.Text = "View";
             this.btnDisplayMakes.UseVisualStyleBackColor = true;
+            this.btnDisplayMakes.Click += new System.EventHandler(this.btnDisplayMakes_Click);
             // 
             // MainForm
             // 
