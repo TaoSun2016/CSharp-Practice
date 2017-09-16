@@ -72,7 +72,7 @@ namespace WindowsFormsDataBinding
         private void btnDisplayMakes_Click(object sender, EventArgs e)
         {
             string stringFilter = $"Make = '{txtMakeToView.Text.Trim()}'";
-            DataRow[] carRecords = inventoryTable.Select(stringFilter);
+            DataRow[] carRecords = inventoryTable.Select(stringFilter,"PetName DESC");
             if (carRecords.Length <=0 )
             {
                 MessageBox.Show("There's no search result!");
