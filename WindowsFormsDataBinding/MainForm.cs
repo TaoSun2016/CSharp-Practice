@@ -32,10 +32,10 @@ namespace WindowsFormsDataBinding
 
         void CreateTable()
         {
-            var carIDColumn = new DataColumn("Id",typeof(int));
-            var carMakeColumn = new DataColumn("Make",typeof(string));
-            var carColorColumn = new DataColumn("Color",typeof(string));
-            var carPetNameColumn = new DataColumn("PetName", typeof(string)) { Caption="Pet Name"};
+            var carIDColumn = new DataColumn("Id", typeof(int));
+            var carMakeColumn = new DataColumn("Make", typeof(string));
+            var carColorColumn = new DataColumn("Color", typeof(string));
+            var carPetNameColumn = new DataColumn("PetName", typeof(string)) { Caption = "Pet Name" };
             inventoryTable.Columns.AddRange(new[] { carIDColumn, carMakeColumn, carColorColumn, carPetNameColumn });
             foreach (var i in listCar)
             {
@@ -72,19 +72,49 @@ namespace WindowsFormsDataBinding
         private void btnDisplayMakes_Click(object sender, EventArgs e)
         {
             string stringFilter = $"Make = '{txtMakeToView.Text.Trim()}'";
-            DataRow[] carRecords = inventoryTable.Select(stringFilter,"PetName DESC");
-            if (carRecords.Length <=0 )
+            DataRow[] carRecords = inventoryTable.Select(stringFilter, "PetName DESC");
+            if (carRecords.Length <= 0)
             {
                 MessageBox.Show("There's no search result!");
             }
             else
             {
                 string stringResult = null;
-                for (int i = 0; i<carRecords.Count();i++)
+                for (int i = 0; i < carRecords.Count(); i++)
                 {
-                    stringResult += carRecords[i]["PetName"]+"\n";
+                    stringResult += carRecords[i]["PetName"] + "\n";
                 }
-                MessageBox.Show(stringResult,$"We have {txtMakeToView.Text}s named:");
+                MessageBox.Show(stringResult, $"We have {txtMakeToView.Text}s named:");
+            }
+        }
+
+        private void ShowIDGT5_Click(object sender, EventArgs e)
+        {
+            string filterString = null;
+            filterString = "ID > 5";
+
+            DataRow[] dataRows = inventoryTable.Select(filterString, "ID");
+            string outputString = null;
+
+            for (int i = 0; i < dataRows.Length; i++)
+            {
+                outputString += $"{dataRows[i]["PetName"]}'s ID is {dataRows[i]["ID"]}\n";
+            }
+            MessageBox.Show(outputString);
+        }
+
+        private void ChangeBMW_Click(object sender, EventArgs e)
+        {
+
+
+            if (DialogResult.Yes == MessageBox.Show("Are you sure you want to change BMW?", "Please reassure", MessageBoxButtons.YesNo))
+            {
+                string filterString = "Make = 'BMW'";
+                DataRow[] dataRow = inventoryTable.Select(filterString);
+                for (int i = 0; i < dataRow.Length; i++)
+                {
+                    dataRow[i]["Make"] = "Yugo";
+                }
             }
         }
     }

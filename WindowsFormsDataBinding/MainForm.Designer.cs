@@ -34,8 +34,10 @@
             this.btnRemoveCar = new System.Windows.Forms.Button();
             this.txtCarToRemove = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtMakeToView = new System.Windows.Forms.TextBox();
             this.btnDisplayMakes = new System.Windows.Forms.Button();
+            this.txtMakeToView = new System.Windows.Forms.TextBox();
+            this.ShowIDGT5 = new System.Windows.Forms.Button();
+            this.ChangeBMW = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.carInventoryGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -99,13 +101,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // txtMakeToView
-            // 
-            this.txtMakeToView.Location = new System.Drawing.Point(3, 17);
-            this.txtMakeToView.Name = "txtMakeToView";
-            this.txtMakeToView.Size = new System.Drawing.Size(100, 21);
-            this.txtMakeToView.TabIndex = 0;
-            // 
             // btnDisplayMakes
             // 
             this.btnDisplayMakes.Location = new System.Drawing.Point(109, 15);
@@ -116,11 +111,40 @@
             this.btnDisplayMakes.UseVisualStyleBackColor = true;
             this.btnDisplayMakes.Click += new System.EventHandler(this.btnDisplayMakes_Click);
             // 
+            // txtMakeToView
+            // 
+            this.txtMakeToView.Location = new System.Drawing.Point(3, 17);
+            this.txtMakeToView.Name = "txtMakeToView";
+            this.txtMakeToView.Size = new System.Drawing.Size(100, 21);
+            this.txtMakeToView.TabIndex = 0;
+            // 
+            // ShowIDGT5
+            // 
+            this.ShowIDGT5.Location = new System.Drawing.Point(24, 270);
+            this.ShowIDGT5.Name = "ShowIDGT5";
+            this.ShowIDGT5.Size = new System.Drawing.Size(75, 23);
+            this.ShowIDGT5.TabIndex = 4;
+            this.ShowIDGT5.Text = "ViewID>5";
+            this.ShowIDGT5.UseVisualStyleBackColor = true;
+            this.ShowIDGT5.Click += new System.EventHandler(this.ShowIDGT5_Click);
+            // 
+            // ChangeBMW
+            // 
+            this.ChangeBMW.Location = new System.Drawing.Point(233, 270);
+            this.ChangeBMW.Name = "ChangeBMW";
+            this.ChangeBMW.Size = new System.Drawing.Size(75, 23);
+            this.ChangeBMW.TabIndex = 5;
+            this.ChangeBMW.Text = "ChangeBMW";
+            this.ChangeBMW.UseVisualStyleBackColor = true;
+            this.ChangeBMW.Click += new System.EventHandler(this.ChangeBMW_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 261);
+            this.ClientSize = new System.Drawing.Size(545, 334);
+            this.Controls.Add(this.ChangeBMW);
+            this.Controls.Add(this.ShowIDGT5);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -148,6 +172,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnDisplayMakes;
         private System.Windows.Forms.TextBox txtMakeToView;
+        private System.Windows.Forms.Button ShowIDGT5;
+        private System.Windows.Forms.Button ChangeBMW;
     }
 }
 
