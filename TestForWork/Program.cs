@@ -16,6 +16,14 @@ namespace TestForWork
             Console.WriteLine(intMyArr.Length);
             Console.WriteLine(intMyArr.GetUpperBound(0));
 
+            string s1, s2;
+            s1 = "Hi";
+            s2 = "Hi";
+
+
+            s2 = "fk";
+            Console.WriteLine(s1+"  "+s2);
+
         }
     }
 }
