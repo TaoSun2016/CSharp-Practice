@@ -19,8 +19,8 @@ namespace CSharp
             //(new ReflectTest()).test();
             //ExternalAssemblyReflector.test();
             //SharedAsmReflector.test();
-            //StringTest();
-            //MathTest();
+            StringTest();
+            MathTest();
             /*
             Singleton s1 = Singleton.instance();
             Singleton s2 = Singleton.instance();
@@ -231,6 +231,7 @@ namespace CSharp
             dest = new string(destArray);//这时dest为"Hello China"
             Console.WriteLine(dest);
             Console.WriteLine("111".Contains("11"));
+            
 
 
         }
