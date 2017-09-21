@@ -12,10 +12,10 @@ namespace TestForWork
     {
         static void Main(string[] args)
         {
-            int[,] intMyArr = { { 7, 1, 3 }, { 2, 9, 6 } };
+            /*int[,] intMyArr = { { 7, 1, 3 }, { 2, 9, 6 } };
             Console.WriteLine(intMyArr.GetUpperBound(1));
             Console.WriteLine(intMyArr.Length);
-            Console.WriteLine(intMyArr.GetUpperBound(0));
+            Console.WriteLine(intMyArr.GetUpperBound(0));*/
 
 ;
             //int[][][] a = new int[3][][];
@@ -56,7 +56,7 @@ namespace TestForWork
         }
         static void TestArray2()
         {
-            Console.Write("Input the number of elements to store in the array:");
+            /*Console.Write("Input the number of elements to store in the array:");
             int elementNumber = int.Parse(Console.ReadLine());
             int[] myArray = new int[elementNumber];
             for (int i = 0; i < elementNumber; i++)
@@ -67,6 +67,14 @@ namespace TestForWork
             for(int i = elementNumber - 1; i >= 0; i--)
             {
                 Console.WriteLine($"{myArray[i]} ");
+            }
+            */
+            List<char> myArray2 = new List<char>{ '0','1','3'};
+            Console.WriteLine(myArray2.Where(m=>m!='0').Count());
+            
+            foreach (var i in myArray2.Where(m => m != '0'))
+            {
+                Console.WriteLine(i);
             }
         }
     }
