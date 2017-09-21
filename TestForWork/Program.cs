@@ -38,7 +38,7 @@ namespace TestForWork
             
             */
             //TestArray1();
-            TestArray3();
+            TestArray5();
         }
         static void TestArray1()
         {
@@ -77,7 +77,7 @@ namespace TestForWork
                 Console.WriteLine(i);
             }
         }
-        static void TestArray3()
+        static void TesInput()
         {
             int number=-1;
             bool inputError = false;
@@ -100,5 +100,63 @@ namespace TestForWork
             Console.WriteLine($"The number inputted is {number}");
         }
        
+        static void TestArray3()
+        {
+            Console.WriteLine("Please input the number of array");
+            int elementNumber = int.Parse(Console.ReadLine());
+
+            int[] myArray = new int[elementNumber];
+            InputArray(myArray);
+            Console.WriteLine(SumOfArray(myArray));
+            
+        }
+        static void TestArray4()
+        {
+            Console.WriteLine("Please input the number of array");
+            int elementNumber = int.Parse(Console.ReadLine());
+
+            int[] myArray = new int[elementNumber];
+            int[] destinationArray =new int[elementNumber]; ;
+            InputArray(myArray);
+            myArray.CopyTo(destinationArray, 0);
+            ShowArray(myArray);
+            ShowArray(destinationArray);
+            Console.WriteLine(myArray==destinationArray);
+        }
+        static void TestArray5()
+        {
+            Console.WriteLine("Please input the number of array");
+            int elementNumber = int.Parse(Console.ReadLine());
+
+            int[] myArray = new int[elementNumber];
+            int[] destinationArray = new int[elementNumber]; ;
+            InputArray(myArray);
+            foreach (var i in (myArray.Distinct()))
+            {
+                Console.Write($"[{i}]");
+            }
+            Console.WriteLine();
+
+        }
+        static void InputArray(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine($"Element[{i}]:");
+                array[i] = int.Parse(Console.ReadLine());
+            }
+        }
+        static void ShowArray(int[] array)
+        {
+            foreach (var i in array)
+            {
+                Console.Write($"[{i}] ");
+            }
+            Console.WriteLine();
+        }
+        static int SumOfArray(int[] array)
+        {
+            return array.Sum(i=> i);
+        }
     }
 }
