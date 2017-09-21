@@ -22,6 +22,7 @@ namespace TestForWork
             //for (int i = 0; i < a.Length; i++)
             //    a[i] = new int[i + 7];
             //int[,] a = new int[3, 4];
+            /*
             Console.WriteLine(Math.Exp(2));
             Console.WriteLine(Math.Pow(Math.E,2));
             Console.WriteLine(Math.E);
@@ -35,7 +36,22 @@ namespace TestForWork
             StringBuilder sb = new StringBuilder();
             Regex.Match("abcddddddd","^abc*");
             
-            
+            */
+            TestArray();
+
+        }
+        static void TestArray()
+        {
+            int[] myArray = new int[10];
+            for (int i=0;i<myArray.Length;i++)
+            {
+                Console.Write($"Element[{i}]:");
+                myArray[i] = int.Parse(Console.ReadLine());
+            }
+            foreach (var i in myArray)
+            {
+                Console.Write($"{i} ");
+            }
 
         }
     }
