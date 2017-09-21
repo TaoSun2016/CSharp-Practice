@@ -37,8 +37,8 @@ namespace TestForWork
             Regex.Match("abcddddddd","^abc*");
             
             */
-            TestArray1();
-
+            //TestArray1();
+            TestArray2();
         }
         static void TestArray1()
         {
@@ -53,6 +53,21 @@ namespace TestForWork
                 Console.Write($"{i} ");
             }
 
+        }
+        static void TestArray2()
+        {
+            Console.Write("Input the number of elements to store in the array:");
+            int elementNumber = int.Parse(Console.ReadLine());
+            int[] myArray = new int[elementNumber];
+            for (int i = 0; i < elementNumber; i++)
+            {
+                Console.WriteLine($"Element[{i}]:");
+                myArray[i] = int.Parse(Console.ReadLine());
+            }
+            for(int i = elementNumber - 1; i >= 0; i--)
+            {
+                Console.WriteLine($"{myArray[i]} ");
+            }
         }
     }
 }
