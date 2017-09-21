@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 
@@ -26,7 +27,15 @@ namespace TestForWork
             Console.WriteLine(Math.E);
             Console.WriteLine(Math.Log(Math.Exp(2)));
             Console.WriteLine(Math.Log10(100));
-           
+
+            string testString = "ABCDdfgh";
+            Console.WriteLine(testString.Contains("A"));
+            Console.WriteLine(testString.LastIndexOf('d',6));
+            Console.WriteLine(testString.Remove(3,1));
+            StringBuilder sb = new StringBuilder();
+            Regex.Match("abcddddddd","^abc*");
+            
+            
 
         }
     }
