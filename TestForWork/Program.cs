@@ -37,10 +37,10 @@ namespace TestForWork
             Regex.Match("abcddddddd","^abc*");
             
             */
-            TestArray();
+            TestArray1();
 
         }
-        static void TestArray()
+        static void TestArray1()
         {
             int[] myArray = new int[10];
             for (int i=0;i<myArray.Length;i++)
