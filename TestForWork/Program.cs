@@ -38,7 +38,7 @@ namespace TestForWork
             
             */
             //TestArray1();
-            TestArray2();
+            TestArray3();
         }
         static void TestArray1()
         {
@@ -77,5 +77,28 @@ namespace TestForWork
                 Console.WriteLine(i);
             }
         }
+        static void TestArray3()
+        {
+            int number=-1;
+            bool inputError = false;
+            do
+            {
+                Console.Write("Please input a number:");
+                try
+                {
+                    number = int.Parse(Console.ReadLine());
+                    inputError = false;
+                }
+                catch
+                {
+                    Console.WriteLine("InputError,try again!");
+                    inputError = true;
+                }
+            } while (inputError);
+
+
+            Console.WriteLine($"The number inputted is {number}");
+        }
+       
     }
 }
