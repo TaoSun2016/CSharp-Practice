@@ -16,13 +16,17 @@ namespace TestForWork
             Console.WriteLine(intMyArr.Length);
             Console.WriteLine(intMyArr.GetUpperBound(0));
 
-            string s1, s2;
-            s1 = "Hi";
-            s2 = "Hi";
-
-
-            s2 = "fk";
-            Console.WriteLine(s1+"  "+s2);
+;
+            //int[][][] a = new int[3][][];
+            //for (int i = 0; i < a.Length; i++)
+            //    a[i] = new int[i + 7];
+            //int[,] a = new int[3, 4];
+            Console.WriteLine(Math.Exp(2));
+            Console.WriteLine(Math.Pow(Math.E,2));
+            Console.WriteLine(Math.E);
+            Console.WriteLine(Math.Log(Math.Exp(2)));
+            Console.WriteLine(Math.Log10(100));
+           
 
         }
     }
