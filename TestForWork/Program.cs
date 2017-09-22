@@ -38,7 +38,7 @@ namespace TestForWork
             
             */
             //TestArray1();
-            TestArray8();
+            TestArray9();
         }
         static void TestArray1()
         {
@@ -167,6 +167,20 @@ namespace TestForWork
             {
                 Console.WriteLine(i.Key +" "+ i.Count());
             }
+        }
+
+        // find maximum and minimum element in an array
+        static void TestArray9()
+        {
+            Console.WriteLine("Please input the number of array1");
+            int elementNumber1 = int.Parse(Console.ReadLine());
+            int[] myArray1 = new int[elementNumber1];
+            InputArray(myArray1);
+
+
+                Console.WriteLine(myArray1.Max());
+            Console.WriteLine(myArray1.Min());
+
         }
         static void InputArray(int[] array)
         {
