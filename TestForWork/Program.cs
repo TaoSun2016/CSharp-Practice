@@ -38,7 +38,7 @@ namespace TestForWork
             
             */
             //TestArray1();
-            TestArray5();
+            TestArray7();
         }
         static void TestArray1()
         {
@@ -137,6 +137,24 @@ namespace TestForWork
             }
             Console.WriteLine();
 
+        }
+        static void TestArray7()
+        {
+            Console.WriteLine("Please input the number of array1");
+            int elementNumber1 = int.Parse(Console.ReadLine());
+            int[] myArray1 = new int[elementNumber1];
+            InputArray(myArray1);
+
+            Console.WriteLine("Please input the number of array2");
+            int elementNumber2 = int.Parse(Console.ReadLine());
+            int[] myArray2 = new int[elementNumber2];
+            InputArray(myArray2);
+            int[] myArray3 = new int[elementNumber1 + elementNumber2];
+            myArray1.CopyTo(myArray3,0);
+            myArray2.CopyTo(myArray3, myArray1.Length);
+            ShowArray(myArray3);
+            Array.Sort(myArray3);
+            ShowArray(myArray3);
         }
         static void InputArray(int[] array)
         {
