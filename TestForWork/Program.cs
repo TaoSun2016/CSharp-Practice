@@ -38,7 +38,7 @@ namespace TestForWork
             
             */
             //TestArray1();
-            TestArray9();
+            TestArray10();
         }
         static void TestArray1()
         {
@@ -176,11 +176,20 @@ namespace TestForWork
             int elementNumber1 = int.Parse(Console.ReadLine());
             int[] myArray1 = new int[elementNumber1];
             InputArray(myArray1);
+            
 
 
                 Console.WriteLine(myArray1.Max());
             Console.WriteLine(myArray1.Min());
 
+        }
+        static void TestArray10()
+        {
+            int[] myArray = new int[3] { 1, 2, 3 };
+            ShowArray(myArray);
+            Array.Sort(myArray);
+            Console.WriteLine(myArray[myArray.Length-2]);
+         
         }
         static void InputArray(int[] array)
         {
