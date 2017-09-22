@@ -38,7 +38,7 @@ namespace TestForWork
             
             */
             //TestArray1();
-            TestArray7();
+            TestArray8();
         }
         static void TestArray1()
         {
@@ -155,6 +155,18 @@ namespace TestForWork
             ShowArray(myArray3);
             Array.Sort(myArray3);
             ShowArray(myArray3);
+        }
+        static void TestArray8()
+        {
+            Console.WriteLine("Please input the number of array1");
+            int elementNumber1 = int.Parse(Console.ReadLine());
+            int[] myArray1 = new int[elementNumber1];
+            InputArray(myArray1);
+
+            foreach (var i in (myArray1.GroupBy(m=>m)))
+            {
+                Console.WriteLine(i.Key +" "+ i.Count());
+            }
         }
         static void InputArray(int[] array)
         {
