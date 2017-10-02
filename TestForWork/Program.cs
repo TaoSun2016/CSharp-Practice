@@ -38,7 +38,14 @@ namespace TestForWork
             
             */
             //TestArray1();
-            TestArray10();
+            //TestArray10();
+            Random random = new Random();
+            int temp;
+            for (int i=0;i<100;i++)
+            {
+                temp=random.Next(1,9);
+                Console.WriteLine(temp);
+            }
         }
         static void TestArray1()
         {
