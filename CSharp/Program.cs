@@ -5,6 +5,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace CSharp
 {
@@ -145,14 +148,36 @@ namespace CSharp
             string[] arrayParameter = inputParameter.Split(new[] { ' ' });
             Console.WriteLine(GetSum(int.Parse(arrayParameter[0]),int.Parse(arrayParameter[1])));
             */
-
+            /*
+            Console.WriteLine("","");
             Console.WriteLine((testStr == null)?"testStr is null":testStr);
             Console.WriteLine((testDate == null)?"testDate is null":testDate.ToString());
             Console.WriteLine(testInt == null?"testInt is null":testInt.ToString());
-
+            */
+            TestLinq2Object();
+            System.Configuration.ConfigurationManager
 
         }
+        static void TestLinq2DataSet()
+        {
+            string connectString = ConfigurationManager.ConnectionStrings
+        }
+        static void TestLinq2Object()
+        {
+            string[] tools = { "Tablesaw", "Bandsaw", "Planer", "Jointer", "Drill", "Sander" };
+            var list = from t in tools select t;
 
+            StringBuilder sb = new StringBuilder();
+
+            foreach (string s in list)
+            {
+                sb.Append(s + Environment.NewLine);
+            }
+
+            Console.WriteLine(sb.ToString(), "Tools");
+            Console.ReadLine();
+
+        }
 
 
 
