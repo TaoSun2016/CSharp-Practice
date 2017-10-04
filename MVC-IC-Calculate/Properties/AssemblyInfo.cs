@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("IC_MVCTEST")]
+[assembly: AssemblyTitle("MVC_IC_Calculate")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("IC_MVCTEST")]
+[assembly: AssemblyProduct("MVC_IC_Calculate")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("92654b00-53ad-406a-919d-23e8e7955423")]
+[assembly: Guid("4b4c6349-a397-461d-8dab-8183f565b272")]
 
 // Version information for an assembly consists of the following four values:
 //

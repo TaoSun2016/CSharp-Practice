@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace IC_MVCTEST
+namespace MVC_IC_Calculate
 {
     public class RouteConfig
     {
