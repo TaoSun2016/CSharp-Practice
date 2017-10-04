@@ -16,7 +16,7 @@ namespace MVC_IC_Calculate.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index([Bind(Include ="Height,Weight")] Operant operant)
+        public ActionResult Index([Bind(Include ="Height,Width")] Operant operant)
         {
             if (ModelState.IsValid)
             {
