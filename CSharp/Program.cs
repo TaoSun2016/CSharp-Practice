@@ -155,12 +155,10 @@ namespace CSharp
             Console.WriteLine(testInt == null?"testInt is null":testInt.ToString());
             */
             TestLinq2Object();
-            System.Configuration.ConfigurationManager
-
         }
         static void TestLinq2DataSet()
         {
-            string connectString = ConfigurationManager.ConnectionStrings
+            string connectString = ConfigurationManager.ConnectionStrings("");
         }
         static void TestLinq2Object()
         {
