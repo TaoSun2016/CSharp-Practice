@@ -1,7 +1,19 @@
-﻿
+﻿@model MVC_IC_Calculate.Models.Operant
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Calculation";
 }
 
-<h2>Index</h2>
+<h2>Calculation</h2>
 
+
+@using (Html.BeginForm())
+{
+    @Html.EditorFor(m => m.Height);
+    <br />
+    @Html.EditorFor(m => m.Width);
+    <br />
+    <input type="submit" value="Calculate" />
+    <br />
+    @Html.EditorFor(m => m.Area);
+
+}
