@@ -22,8 +22,8 @@ namespace CSharp
             //(new ReflectTest()).test();
             //ExternalAssemblyReflector.test();
             //SharedAsmReflector.test();
-            StringTest();
-            MathTest();
+            //StringTest();
+            // MathTest();
             /*
             Singleton s1 = Singleton.instance();
             Singleton s2 = Singleton.instance();
@@ -154,11 +154,12 @@ namespace CSharp
             Console.WriteLine((testDate == null)?"testDate is null":testDate.ToString());
             Console.WriteLine(testInt == null?"testInt is null":testInt.ToString());
             */
-            TestLinq2Object();
+            //TestLinq2Object();
+            TestLinqSort();
         }
         static void TestLinq2DataSet()
         {
-            string connectString = ConfigurationManager.ConnectionStrings("");
+            //string connectString = ConfigurationManager.ConnectionStrings("");
         }
         static void TestLinq2Object()
         {
@@ -320,5 +321,37 @@ namespace CSharp
                     where i%2==0
                     select (long)i).Sum();
         }
+
+        public static void TestLinqSort()
+        {
+            Console.WriteLine("hello");
+            List<STRUC> list = new List<STRUC>();
+
+            list.Add(new STRUC { id = 1, name = "A" });
+            list.Add(new STRUC { id = 3, name = "B" });
+            list.Add(new STRUC { id = 2, name = "B" });
+            
+
+            foreach (var i in list)
+            {
+                Console.WriteLine(i.id+"  "+i.name);
+            }
+            //var l1 = list.AsQueryable().OrderBy(m => m.id);
+            //foreach (var i in l1)
+            //{
+            //    Console.WriteLine(i.id + "  " + i.name);
+            //}
+            var l2 = list.AsQueryable().OrderByDescending(m => m.name);
+            foreach (var i in l2)
+            {
+                Console.WriteLine(i.id + "  " + i.name);
+            }
+        }
+    }
+
+    public class STRUC
+    {
+        public int id { get; set; }
+        public  string name { get; set; }
     }
 }
