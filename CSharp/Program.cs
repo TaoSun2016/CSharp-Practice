@@ -155,7 +155,7 @@ namespace CSharp
             Console.WriteLine(testInt == null?"testInt is null":testInt.ToString());
             */
             //TestLinq2Object();
-            TestLinqSort();
+            TestLinqIn();
         }
         static void TestLinq2DataSet()
         {
@@ -342,6 +342,34 @@ namespace CSharp
             //    Console.WriteLine(i.id + "  " + i.name);
             //}
             var l2 = list.AsQueryable().OrderByDescending(m => m.name);
+            foreach (var i in l2)
+            {
+                Console.WriteLine(i.id + "  " + i.name);
+            }
+        }
+        public static void TestLinqIn()
+        {
+            Console.WriteLine("hello");
+            List<STRUC> list = new List<STRUC>();
+
+            list.Add(new STRUC { id = 1, name = "A" });
+            list.Add(new STRUC { id = 3, name = "B" });
+            list.Add(new STRUC { id = 2, name = "B" });
+            list.Add(new STRUC { id = 4, name = "c" });
+
+
+            foreach (var i in list)
+            {
+                Console.WriteLine(i.id + "  " + i.name);
+            }
+            //var l1 = list.AsQueryable().OrderBy(m => m.id);
+            //foreach (var i in l1)
+            //{
+            //    Console.WriteLine(i.id + "  " + i.name);
+            //}
+            string aa = "A";
+            Console.WriteLine("====================");
+            var l2 = list.Where(x=>x.name==aa);
             foreach (var i in l2)
             {
                 Console.WriteLine(i.id + "  " + i.name);
