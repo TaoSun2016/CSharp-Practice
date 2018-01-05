@@ -35,6 +35,15 @@ namespace DesignPattern
 
 
             Console.WriteLine("------------------------------------------");
+            //Abstract Factory 2
+            ContinentFactory africa = new AfricaFactory();
+            ContinentFactory america = new AmericaFactory();
+
+            WildWorld africaWorld = new WildWorld(africa);
+            WildWorld americaWorld = new WildWorld(america);
+
+            africaWorld.Run();
+            americaWorld.Run();
         }
     } 
 }
