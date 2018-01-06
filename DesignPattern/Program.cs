@@ -24,26 +24,34 @@ namespace DesignPattern
 
             //Abstract Factory 1
             // Abstract factory #1
-            AbstractFactory1 factory1 = new ConcreteFactory11();
-            Client client1 = new Client(factory1);
-            client1.Run();
+            //AbstractFactory1 factory1 = new ConcreteFactory11();
+            //Client client1 = new Client(factory1);
+            //client1.Run();
 
             // Abstract factory #2
-            AbstractFactory1 factory2 = new ConcreteFactory12();
-            Client client2 = new Client(factory2);
-            client2.Run();
+            //AbstractFactory1 factory2 = new ConcreteFactory12();
+            //Client client2 = new Client(factory2);
+            //client2.Run();
 
 
-            Console.WriteLine("------------------------------------------");
+            //Console.WriteLine("------------------------------------------");
             //Abstract Factory 2
-            ContinentFactory africa = new AfricaFactory();
-            ContinentFactory america = new AmericaFactory();
+            //ContinentFactory africa = new AfricaFactory();
+            //ContinentFactory america = new AmericaFactory();
 
-            WildWorld africaWorld = new WildWorld(africa);
-            WildWorld americaWorld = new WildWorld(america);
+            //WildWorld africaWorld = new WildWorld(africa);
+            //WildWorld americaWorld = new WildWorld(america);
 
-            africaWorld.Run();
-            americaWorld.Run();
+            //africaWorld.Run();
+            //americaWorld.Run();
+
+            //database provider pattern
+            DbProvider provider = new DbProvider();
+            provider.GetData();
+
+            //Factory method pattern
+            Console.WriteLine("Factory method pattern");
+            Console.WriteLine("------------------------------------------");
         }
     } 
 }

@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DesignPattern.FactoryMethod2_1</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -47,6 +50,7 @@
     <Compile Include="ContinentFactory.cs" />
     <Compile Include="DbProvider.cs" />
     <Compile Include="DisposeTest.cs" />
+    <Compile Include="FactoryMethod2_1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton.cs" />
