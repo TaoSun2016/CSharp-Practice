@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DesignPattern.FactoryMethod2_1</StartupObject>
+    <StartupObject>DesignPattern.DesignPatterAdapter1</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +49,7 @@
     <Compile Include="AbstractFactory1.cs" />
     <Compile Include="ContinentFactory.cs" />
     <Compile Include="DbProvider.cs" />
+    <Compile Include="DesignPatterAdapter1.cs" />
     <Compile Include="DisposeTest.cs" />
     <Compile Include="FactoryMethod2_1.cs" />
     <Compile Include="Program.cs" />
