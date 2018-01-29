@@ -155,7 +155,8 @@ namespace CSharp
             Console.WriteLine(testInt == null?"testInt is null":testInt.ToString());
             */
             //TestLinq2Object();
-            TestLinqIn();
+            //TestLinqIn();
+            TestDate();
         }
         static void TestLinq2DataSet()
         {
@@ -374,6 +375,12 @@ namespace CSharp
             {
                 Console.WriteLine(i.id + "  " + i.name);
             }
+        }
+        static void TestDate()
+        {
+            DateTime d = DateTime.Now;
+            Console.WriteLine(d.ToString());
+            Console.WriteLine(String.Format("{0: MMMM d yyyy}",d));
         }
     }
 
