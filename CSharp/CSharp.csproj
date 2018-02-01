@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CSharp.DataRowTest</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CarLibrary">
       <HintPath>..\CarLibrary\bin\Debug\CarLibrary.dll</HintPath>
@@ -48,6 +51,7 @@
   <ItemGroup>
     <Compile Include="BMWCar.cs" />
     <Compile Include="Car.cs" />
+    <Compile Include="DataRowTest.cs" />
     <Compile Include="ExternalAssemblyReflector.cs" />
     <Compile Include="HondaCar.cs" />
     <Compile Include="LinkTest.cs" />
