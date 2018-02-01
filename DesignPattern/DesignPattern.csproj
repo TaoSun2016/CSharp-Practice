@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DesignPattern.Builder.BuilderCreationalDP</StartupObject>
+    <StartupObject>DesignPattern.BuilderCreationalDP2</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="AbstractFactory1.cs" />
     <Compile Include="BuilderCreationalDP.cs" />
+    <Compile Include="BuilderCreationalDP2.cs" />
     <Compile Include="ContinentFactory.cs" />
     <Compile Include="DbProvider.cs" />
     <Compile Include="DesignPatterAdapter1.cs" />
