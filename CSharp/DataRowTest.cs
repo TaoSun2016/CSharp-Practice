@@ -36,6 +36,13 @@ namespace CSharp
                 Console.WriteLine(r["col2"]);
             }
 
+            DataTableReader dr = table.CreateDataReader();
+            while (dr.Read())
+            {
+                Console.WriteLine(dr["col1"]);
+                Console.WriteLine(dr["col2"]);
+            }
+
 
         }
     }
