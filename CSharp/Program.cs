@@ -414,19 +414,20 @@ namespace CSharp
 
         static void TestSwitch()
         {
-            double d = 8.4;
+            char d = 'A';
             switch (d)
             {
-                case 8.0:
+                case 'A':
                     Console.WriteLine("8.0");
                     break;
-                case 8.4:
+                case 'B':
                     Console.WriteLine("8.4");
                     break;
                 default:
                     Console.WriteLine("default");
                     break;
             }
+            
         }
 
     }
