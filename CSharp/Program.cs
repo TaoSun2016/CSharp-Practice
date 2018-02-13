@@ -160,7 +160,8 @@ namespace CSharp
             //TestNumberOutput();
             //BasicMember();
 
-            TestEnum();
+            //TestEnum();
+            TestSwitch();
         }
         static void TestLinq2DataSet()
         {
@@ -408,6 +409,23 @@ namespace CSharp
             var array = Enum.GetValues(typeof(EnumTest));
             foreach (var i in array) {
                 Console.WriteLine(i);
+            }
+        }
+
+        static void TestSwitch()
+        {
+            double d = 8.4;
+            switch (d)
+            {
+                case 8.0:
+                    Console.WriteLine("8.0");
+                    break;
+                case 8.4:
+                    Console.WriteLine("8.4");
+                    break;
+                default:
+                    Console.WriteLine("default");
+                    break;
             }
         }
 
