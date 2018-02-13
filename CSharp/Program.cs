@@ -157,7 +157,10 @@ namespace CSharp
             //TestLinq2Object();
             //TestLinqIn();
             //TestDate();
-            TestNumberOutput();
+            //TestNumberOutput();
+            //BasicMember();
+
+            TestEnum();
         }
         static void TestLinq2DataSet()
         {
@@ -290,7 +293,6 @@ namespace CSharp
                 }
             }
             return sum;
-
         }
         public static bool IsPrime(int num)
         {
@@ -384,8 +386,8 @@ namespace CSharp
             Console.WriteLine(String.Format("{0: MMMM d yyyy}", d));
         }
 
-        static void TestNumberOutput(){
-            Console.WriteLine("{0:c3}",99.998);  //$99.998
+        static void TestNumberOutput() {
+            Console.WriteLine("{0:c3}", 99.998);  //$99.998
             Console.WriteLine("{0:d7}", 99);
             Console.WriteLine("{0:e}", 99.998);
             Console.WriteLine("{0:f2}", 99.998);
@@ -394,11 +396,33 @@ namespace CSharp
             Console.WriteLine("{0:x}", 99);
         }
 
+        static void BasicMember()
+        {
+            Console.WriteLine(char.IsDigit('1'));
+            Console.WriteLine(char.IsNumber('1'));
+
+        }
+
+        static void TestEnum()
+        {
+            var array = Enum.GetValues(typeof(EnumTest));
+            foreach (var i in array) {
+                Console.WriteLine(i);
+            }
+        }
+
     }
 
     public class STRUC
     {
         public int id { get; set; }
         public  string name { get; set; }
+    }
+    enum EnumTest
+    {
+        V1,
+        V2,
+        V3
+            
     }
 }
