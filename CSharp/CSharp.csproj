@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CSharp.DataRowTest</StartupObject>
+    <StartupObject>CSharp.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CarLibrary">

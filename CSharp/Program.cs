@@ -156,7 +156,8 @@ namespace CSharp
             */
             //TestLinq2Object();
             //TestLinqIn();
-            TestDate();
+            //TestDate();
+            TestNumberOutput();
         }
         static void TestLinq2DataSet()
         {
@@ -183,11 +184,11 @@ namespace CSharp
 
         static void func1(ref int[] arr)
         {
-            for (int i=0;i<arr.Length;i+=2)
+            for (int i = 0; i < arr.Length; i += 2)
             {
                 arr[i] += 10;
             }
-            Console.WriteLine(string.Join(",",arr));
+            Console.WriteLine(string.Join(",", arr));
         }
         static void TestCar()
         {
@@ -204,7 +205,7 @@ namespace CSharp
         static void StringTest()
         {
             Console.WriteLine(string.Join("aa", new string[] { "bb", "cc", "dd" }));
-            Console.WriteLine(string.Join("迎", new char[] { '韩', '龙', '我' ,'c','d'}));
+            Console.WriteLine(string.Join("迎", new char[] { '韩', '龙', '我', 'c', 'd' }));
             Console.WriteLine("==========================================");
             string str = "I Have a Dream";
             string[] divisionstr = str.Split(' ');
@@ -217,7 +218,7 @@ namespace CSharp
             divisionstr = str.Split(new char[] { ' ' }, 2);
             foreach (string s in divisionstr)
             {
-                Console.WriteLine("["+s+"]");
+                Console.WriteLine("[" + s + "]");
             }
             Console.WriteLine("==========================================");
             str = " 梅西| 卡 卡|小龙 ";
@@ -256,7 +257,7 @@ namespace CSharp
             dest = new string(destArray);//这时dest为"Hello China"
             Console.WriteLine(dest);
             Console.WriteLine("111".Contains("11"));
-            
+
 
 
         }
@@ -266,16 +267,16 @@ namespace CSharp
             Console.WriteLine(Math.Ceiling(1.33));
             Console.WriteLine(Math.Floor(1.33));
             Console.WriteLine(Math.Exp(2));
-            Console.WriteLine(Math.Log(10,100));
+            Console.WriteLine(Math.Log(10, 100));
             Console.WriteLine(Math.Log10(100));
-            Console.WriteLine(Math.Max(1,3));
+            Console.WriteLine(Math.Max(1, 3));
             Console.WriteLine(Math.Min(1, 3));
-            Console.WriteLine(Math.Pow(2,3));
-            Console.WriteLine(Math.Round(8.3333,2));
+            Console.WriteLine(Math.Pow(2, 3));
+            Console.WriteLine(Math.Round(8.3333, 2));
             Console.WriteLine(Math.Sign(-23));
             Console.WriteLine(Math.Sqrt(3));
             Console.WriteLine(Math.Truncate(9.33));
-        
+
         }
 
         public static int GetSum(int num1, int num2)
@@ -293,13 +294,13 @@ namespace CSharp
         }
         public static bool IsPrime(int num)
         {
-            if (num == 1 || num== 2||num==3)
+            if (num == 1 || num == 2 || num == 3)
             {
                 Console.WriteLine("{0} is prime number", num);
 
                 return true;
             }
-            for (int i = 2; i < (Math.Sqrt(num)+1); i++)
+            for (int i = 2; i < (Math.Sqrt(num) + 1); i++)
             {
                 if (num % i == 0)
                 {
@@ -308,18 +309,18 @@ namespace CSharp
                     return false;
                 }
             }
-            Console.WriteLine("{0} is prime number",num);
+            Console.WriteLine("{0} is prime number", num);
             return true;
         }
-        public static long GetSumOfEven1(int [] inputArray)
+        public static long GetSumOfEven1(int[] inputArray)
         {
-            return inputArray.Where(a => a % 2 == 0).Sum(a=>(long)a);
+            return inputArray.Where(a => a % 2 == 0).Sum(a => (long)a);
         }
 
         public static long GetSumOfEven2(int[] inputArray)
         {
             return (from i in inputArray
-                    where i%2==0
+                    where i % 2 == 0
                     select (long)i).Sum();
         }
 
@@ -331,11 +332,11 @@ namespace CSharp
             list.Add(new STRUC { id = 1, name = "A" });
             list.Add(new STRUC { id = 3, name = "B" });
             list.Add(new STRUC { id = 2, name = "B" });
-            
+
 
             foreach (var i in list)
             {
-                Console.WriteLine(i.id+"  "+i.name);
+                Console.WriteLine(i.id + "  " + i.name);
             }
             //var l1 = list.AsQueryable().OrderBy(m => m.id);
             //foreach (var i in l1)
@@ -370,7 +371,7 @@ namespace CSharp
             //}
             string aa = "A";
             Console.WriteLine("====================");
-            var l2 = list.Where(x=>x.name==aa);
+            var l2 = list.Where(x => x.name == aa);
             foreach (var i in l2)
             {
                 Console.WriteLine(i.id + "  " + i.name);
@@ -380,8 +381,19 @@ namespace CSharp
         {
             DateTime d = DateTime.Now;
             Console.WriteLine(d.ToString());
-            Console.WriteLine(String.Format("{0: MMMM d yyyy}",d));
+            Console.WriteLine(String.Format("{0: MMMM d yyyy}", d));
         }
+
+        static void TestNumberOutput(){
+            Console.WriteLine("{0:c3}",99.998);  //$99.998
+            Console.WriteLine("{0:d7}", 99);
+            Console.WriteLine("{0:e}", 99.998);
+            Console.WriteLine("{0:f2}", 99.998);
+            Console.WriteLine("{0:g}", 99.998);
+            Console.WriteLine("{0:n3}", 1199.998);
+            Console.WriteLine("{0:x}", 99);
+        }
+
     }
 
     public class STRUC
