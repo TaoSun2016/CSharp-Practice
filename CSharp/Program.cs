@@ -18,7 +18,19 @@ namespace CSharp
         static int? testInt;
         static void Main(string[] args)
         {
-            TestDic();
+
+            int i = 7, j = 8;
+            STRUC s1 = new STRUC { id=1,name="aa"};
+            STRUC s2 = new STRUC { id =21, name = "bb" };
+            TestSwap1<int>(i,j);
+            Console.WriteLine(i + "  " + j);
+            TestSwap1<STRUC>(s1, s2);
+            Console.WriteLine(s1.name + "  " + s2.name);
+
+
+
+
+            //TestDic();
             //TestCar();
             //(new ReflectTest()).test();
             //ExternalAssemblyReflector.test();
@@ -439,6 +451,21 @@ namespace CSharp
             Dictionary<int, string> dic1 = new Dictionary<int, string> {[1]="AA",[2]="BB" };
             Console.WriteLine(dic1[1]);
 
+        }
+        static void TestSwap1<T>(T a, T b)
+        {
+            T temp;
+            temp = a;
+            a = b;
+            b = temp;
+        }
+
+        static void TestSwap2<T>(ref T a, ref T b)
+        {
+            T temp;
+            temp = a;
+            a = b;
+            b = temp;
         }
 
     }
