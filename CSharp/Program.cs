@@ -18,6 +18,7 @@ namespace CSharp
         static int? testInt;
         static void Main(string[] args)
         {
+            TestDic();
             //TestCar();
             //(new ReflectTest()).test();
             //ExternalAssemblyReflector.test();
@@ -161,7 +162,7 @@ namespace CSharp
             //BasicMember();
 
             //TestEnum();
-            TestSwitch();
+            //TestSwitch();
         }
         static void TestLinq2DataSet()
         {
@@ -428,6 +429,16 @@ namespace CSharp
                     break;
             }
             
+        }
+
+        static void TestDic()
+        {
+            Dictionary<int, string> dic = new Dictionary<int, string> { { 1, "11" }, { 2, "22" } };
+            Console.WriteLine(dic[1]);
+            dic.Add(3,"333");
+            Dictionary<int, string> dic1 = new Dictionary<int, string> {[1]="AA",[2]="BB" };
+            Console.WriteLine(dic1[1]);
+
         }
 
     }
